@@ -1,5 +1,67 @@
-﻿<h3>TestPage</h3>
+﻿@page "/test"
+
+<div class="container-fluid test-page">
+	<div class="container">
+		<div class="row">
+			<div class="test-header">
+				<div class="test-points">
+					<img src="/Images/medalstar.svg" alt="medal icon" /> <span class="points">200</span>
+				</div>
+				<div class="test-title">
+					Fantasy Quiz #156
+				</div>
+				<div class="test-time">
+					25:00
+				</div>
+			</div>
+			<div class="col-12 col-md-6 mx-auto">
+				@if (ExampleTest.Questions != null)
+				{
+					@foreach (var question in ExampleTest.Questions)
+					{
+						<div class="test-container">
+							<div class="test-question-title text-center">@question.Title</div>
+							@if (question.Options != null)
+							{
+								@foreach (var ans in question.Options)
+								{
+									<div class="test-question"><span class="abcd-text">@abcd[inc]</span> @ans</div>
+									inc++;
+								}
+
+							}
+							else
+							{
+								<div>No questions found.</div>
+							}
+						</div>
+					}
+
+				}
+				else
+				{
+					<div>No Test found.</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>
 
 @code {
+	private int inc = 0; 
 
+	private string[] abcd = new string[] { "a", "b", "c", "d" };
+
+	Test ExampleTest = new Test
+		{
+			Questions = new List<Question>
+		{
+			new Question
+			{
+				Title = "What is the capital of France ?",
+				Options = new List<string> { "Berlin", "London", "Paris", "Madrid" },
+				CorrectOption = "Paris"
+			}
+		}
+		};
 }
