@@ -13,14 +13,22 @@
 					<label for="email" class="form-label">Email address</label>
 					<input type="email" class="form-control" id="email" placeholder="email">
 				</div>
-				<div class="mb-3 password-input">
+				<div class="mb-3 password-input position-relative">
 					<label for="password" class="form-label">Password</label>
-					<input type="password" class="form-control" id="password" placeholder="password">
+					<input type="@((isPasswordVisible) ? "text" : "password")" class="form-control" id="password" placeholder="password">
+					@if (isPasswordVisible)
+					{
+						<img @onclick="TogglePasswordVisibility" class="eye-icon" src="/Images/eye.svg" alt="eyelash icon" />
+					}
+					else
+					{
+						<img @onclick="TogglePasswordVisibility" class="eye-icon" src="/Images/eyeslash.svg" alt="eyelash icon" />
+					}
 				</div>
 				<div class="checkbox-container">
 					<div class="mb-3 form-check">
 						<input type="checkbox" class="form-check-input" id="keepLogin">
-						<label class="form-check-label" for="keepLogin">I’ve read and agree with terms of service and our privecy policy</label>
+						<label class="form-check-label" for="keepLogin">I’ve read and agree with terms of service and our privacy policy</label>
 					</div>
 				</div>
 				<button class="login-btn mx-auto d-block my-4" type="submit">Register</button>
@@ -34,4 +42,11 @@
 
 @code {
 	private string inputValue = string.Empty;
+
+	private bool isPasswordVisible = false;
+
+	private void TogglePasswordVisibility()
+	{
+		isPasswordVisible = !isPasswordVisible;
+	}
 }
