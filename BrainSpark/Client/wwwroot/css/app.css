@@ -101,6 +101,8 @@ a, .btn-link {
     }
 
 .forgot-pass,
-.reg-now-btn {
+.reg-now-btn,
+.policy-link,
+.terms-link {
     text-decoration: none;
 }
