@@ -1,4 +1,23 @@
-﻿.login-container {
+﻿.login-page {
+    background-color: #F7EFE5;
+    padding: 2rem 0;
+}
+
+.img-vector1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20rem;
+}
+
+.img-vector2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 20rem;
+}
+
+.login-container {
     background-color: #f7f7f7;
     border-radius: 12px;
     padding: 2rem;
