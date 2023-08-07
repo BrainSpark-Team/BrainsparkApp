@@ -1,0 +1,94 @@
+﻿@page "/admin/newexam"
+
+<div class="container">
+	<div class="row">
+		<div class="col-12 d-flex justify-content-between p-0">
+			<NavLink class="my-auto" href="/">
+				Back <img src="/Images/arrow-left.svg" />
+			</NavLink>
+			<button class="create-btn">Create</button>
+		</div>
+		<div class="col-12 exam-container px-md-4 py-md-5 mt-3">
+			<h1 contenteditable="true" class="text-center">Untitled Exam</h1>
+			<div class="col-12 add-new-container p-0 p-md-3 d-flex">
+				<img src="/Images/plus.svg" alt="plus icon" />
+				<div class="add-btn-container">
+					<button class="@(IsActiveButton(1) ? "active-button" : "") ms-0 ms-md-4" @onclick="() => ToggleActive(1)">Single Choice</button>
+					<button class="@(IsActiveButton(2) ? "active-button" : "") ms-0 ms-md-4" @onclick="() => ToggleActive(2)">Multiple Choice</button>
+					<button class="@(IsActiveButton(3) ? "active-button" : "") ms-0 ms-md-4" @onclick="() => ToggleActive(3)">Text</button>
+				</div>
+			</div>
+			<div class="col-12">
+				@if (activeButton == 1)
+				{
+					<div class="input-boxes">
+						<div class="in-grp">
+							<label for="question">Question</label>
+							<input id="question" type="text" @bind="inputValue0" placeholder="Question" />
+						</div>
+						<div class="in-grp">
+							<label for="ans1">Option 1</label>
+							<input id="ans1" type="text" @bind="inputValue1" placeholder="Option 1" />
+						</div >
+						<div class="in-grp">
+							<label for="ans2">Option 2</label>
+							<input id="ans2" type="text" @bind="inputValue2" placeholder="Option 2" />
+						</div>
+						<div class="in-grp">
+							<label for="ans3">Option 3</label>
+							<input id="ans3" type="text" @bind="inputValue3" placeholder="Option 3" />
+						</div>
+						<div class="in-grp">
+							<label for="ans4">Option 4</label>
+							<input id="ans4" type="text" @bind="inputValue4" placeholder="Option 4" />
+						</div>
+						<button @onclick="AddToInputList">Add to List</button>
+					</div>
+				}
+			</div>
+			@foreach (var divText in inputList)
+			{
+				<div class="dynamic-div">
+					@divText
+				</div>
+			}
+
+		</div>
+	</div>
+</div>
+
+@code {
+	private int activeButton = 0;
+
+	private bool IsActiveButton(int buttonNumber)
+	{
+		return activeButton == buttonNumber;
+	}
+
+	private void ToggleActive(int buttonNumber)
+	{
+		activeButton = IsActiveButton(buttonNumber) ? 0 : buttonNumber;
+	}
+	private string inputValue0 = "";
+	private string inputValue1 = "";
+	private string inputValue2 = "";
+	private string inputValue3 = "";
+	private string inputValue4 = "";
+
+	private List<string> inputList = new List<string>();
+
+	private void AddToInputList()
+	{
+		inputList.Add(inputValue0);
+		inputList.Add(inputValue1);
+		inputList.Add(inputValue2);
+		inputList.Add(inputValue3);
+		inputList.Add(inputValue4);
+
+		inputValue0 = "";
+		inputValue1 = "";
+		inputValue2 = "";
+		inputValue3 = "";
+		inputValue4 = "";
+	}
+}
