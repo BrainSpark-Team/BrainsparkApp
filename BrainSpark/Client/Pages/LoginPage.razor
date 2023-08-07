@@ -1,51 +1,32 @@
-﻿@page "/login"
-<div class="container-fluid login-page position-relative">
-	<img class="img-vector1" src="/Images/Vector.svg" alt="illustration image" />
-	<img class="img-vector2" src="/Images/vector2.svg" alt="illustration image" />
-	<div class="container">
-		<div class="row">
-			<div class="col-12 col-md-8 col-lg-6 mx-auto my-5 login-container ">
-				<h2 class="text-center login-text">Login</h2>
-				<form>
-					<div class="mb-3 email-input">
-						<label for="email" class="form-label">Email address</label>
-						<input type="email" class="form-control" id="email" placeholder="email">
-					</div>
-					<div class="mb-3 password-input position-relative">
-						<label for="password" class="form-label">Password</label>
-						<input type="@((isPasswordVisible) ? "text" : "password")" class="form-control" id="password" placeholder="password">
-						@if (isPasswordVisible)
-						{
-							<img @onclick="TogglePasswordVisibility" class="eye-icon" src="/Images/eye.svg" alt="eyelash icon" />
-						}
-						else
-						{
-							<img @onclick="TogglePasswordVisibility" class="eye-icon" src="/Images/eyeslash.svg" alt="eyelash icon" />
-						}
-					</div>
-					<div class="checkbox-container">
-						<div class="mb-3 form-check">
-							<input type="checkbox" class="form-check-input" id="keepLogin">
-							<label class="form-check-label" for="keepLogin">KEEP ME LOGED IN</label>
-						</div>
-						<div class="mb-3"><NavLink class="forgot-pass" href="/forgotpassword">FORGOT PASSWORD</NavLink></div>
-					</div>
-					<button class="login-btn mx-auto d-block mt-3" type="submit">Login</button>
-					<div class="mt-4">
-						<p class="text-center">You don’t have an account? <NavLink class="reg-now-btn" href="/register">REGISTER NOW</NavLink></p>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
+﻿@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Microsoft.AspNetCore.Components.Authorization
+@page "/login"
+
+
+<AuthorizeView>
+    <NotAuthorized>
+        <button @onclick="BeginLogin">Login with Azure AD B2C</button>
+    </NotAuthorized>
+    <Authorized>
+        Welcome, @context.User.Identity.Name!
+        <button @onclick="BeginLogout">Logout</button>
+    </Authorized>
+</AuthorizeView>
+
 @code {
-	private string inputValue = string.Empty;
+private void BeginLogin()
+{
+    NavigationManager.NavigateTo("authentication/login");
+}
 
-	private bool isPasswordVisible = false;
+private void BeginLogout()
+{
+    NavigationManager.NavigateTo("authentication/logout");
+}
 
-	private void TogglePasswordVisibility()
-	{
-		isPasswordVisible = !isPasswordVisible;
-	}
+    [Inject] public NavigationManager NavigationManager { get; set; }
+    [Inject] public AuthenticationStateProvider AuthenticationStateProvider { get; set; }
+    [Inject] public RemoteAuthenticationService<RemoteAuthenticationState, RemoteUserAccount, OidcProviderOptions> AuthenticationService { get; set; }
+
+
 }
