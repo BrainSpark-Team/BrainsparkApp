@@ -6681,7 +6681,8 @@
     "net7.0": [
       "Microsoft.AspNetCore.OpenApi >= 7.0.9",
       "Microsoft.Azure.Cosmos >= 3.35.2",
-      "Swashbuckle.AspNetCore >= 6.5.0"
+      "Swashbuckle.AspNetCore >= 6.5.0",
+      "System.Web.Security >= 4.3.0"
     ]
   },
   "packageFolders": {
@@ -6741,6 +6742,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.5.0, )"
+          },
+          "System.Web.Security": {
+            "target": "Package",
+            "version": "[4.3.0, )"
           }
         },
         "imports": [
@@ -6765,5 +6770,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package System.Web.Security. No packages exist with this id in source(s): C:\\Program Files\\dotnet\\library-packs, C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs, Microsoft Visual Studio Offline Packages, nuget.org",
+      "libraryId": "System.Web.Security",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }
