@@ -43,12 +43,31 @@
 			</div>
 		</div>
 	</div>
-	<div class="progress-container">
+</div>
+<div class="container-fluid progress-container px-0 py-4">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="d-flex justify-content-sm-around justify-content-between">
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: @ProgressPercentage%" aria-valuenow="@ProgressValue" aria-valuemin="0" aria-valuemax="100">
+						</div>
+						<div class="progress-value">@ProgressValue/@TotalValue</div>
+					</div>
+					<button>Continue</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
 @code {
-	private int inc = 0; 
+	private int inc = 0;
+
+	private int ProgressValue = 5;
+	private int TotalValue = 35;
+
+	private double ProgressPercentage => (double)ProgressValue / TotalValue * 100;
 
 
 	private string[] abcd = new string[] { "a", "b", "c", "d" };

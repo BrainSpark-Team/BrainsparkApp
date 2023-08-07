@@ -58,5 +58,37 @@
 }
 
 .progress-container {
-    background-color: #fff;
+    background-color: #F4F3F6;
+}
+
+.progress {
+    height: 2.6rem;
+    background-color: #EDE8E3;
+    min-width: 30%;
+    overflow: unset;
+    position: relative;
+    border: 6px;
+}
+
+.progress-bar {
+    background-color: #31CD63;
+    border-radius: 6px;
+}
+
+.progress-value {
+    font-size: 1rem;
+    font-weight: 600;
+    position: absolute;
+    right: -3rem;
+    top: 0.5rem;
+    color: #757575;
+}
+
+.progress-container button {
+    background-color: #747475;
+    color: #EDE8E2;
+    border: none;
+    padding: .4rem 1rem;
+    border-radius: 6px;
+    text-transform: uppercase;
 }
