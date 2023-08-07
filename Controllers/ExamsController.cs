@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Security; 
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace MyCosmosApi.Controllers
 {
@@ -16,28 +18,16 @@ namespace MyCosmosApi.Controllers
 public class ExamsController : ControllerBase
 {
     [Authorize(Roles = "Admin")]
-public IActionResult AdminOnlyAction()
-{
-    // Your action logic here
-}
-public void ConfigureServices(IServiceCollection services)
-{
-    // Other service configurations
-
-    services.AddAuthorization(options =>
+    public class ExamsController : ControllerBase
     {
-        options.AddPolicy("AdminPolicy", policy =>
-            policy.RequireRole("Admin"));
-    });
-}
-[Authorize(Policy = "AdminPolicy")]
-public IActionResult AdminOnlyAction()
-{
-    // Your action logic here
-}
-
-
-
+        // This action requires the "Admin" role to access
+        [HttpGet("admin-only")]
+        [Authorize(Policy = "AdminPolicy")]
+        public IActionResult AdminOnlyAction()
+        {
+            return Ok("This is an admin-only endpoint.");
+        }
+    }
     private readonly ApplicationDbContext _context;
 
     public ExamsController(ApplicationDbContext context)

@@ -117,6 +117,12 @@
   ],
   "logs": [
     {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\LarisaBorlea\\azure\\MyCosmosApi\\obj\\project.nuget.cache : Found invalid data while decoding."
+    },
+    {
       "code": "NU1101",
       "level": "Error",
       "message": "Unable to find package System.Web.Security. No packages exist with this id in source(s): C:\\Program Files\\dotnet\\library-packs, C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs, Microsoft Visual Studio Offline Packages, nuget.org",
