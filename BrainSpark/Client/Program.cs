@@ -16,9 +16,15 @@ builder.Services.AddScoped<RemoteAuthenticationService<RemoteAuthenticationState
 
 builder.Services.AddMsalAuthentication(options =>
 {
+    // Bind the AzureAdB2C configuration section to the options
     builder.Configuration.Bind("AzureAdB2C", options.ProviderOptions.Authentication);
-    options.ProviderOptions.DefaultAccessTokenScopes.Add("https://brainsparkdemo.onmicrosoft.com/7962b62a-81be-4516-869b-d870c48ce9d2");
-    options.ProviderOptions.LoginMode = "redirect";
+
+    // Set up the default access token scopes
+    options.ProviderOptions.DefaultAccessTokenScopes.Add("https://graph.microsoft.com/openid");
+    options.ProviderOptions.DefaultAccessTokenScopes.Add("https://graph.microsoft.com/offline_access");
+
+    // Additional configuration (if needed)
+    options.ProviderOptions.LoginMode = "redirect"; // Use "redirect" or "popup" based on your preference
 });
 
 
