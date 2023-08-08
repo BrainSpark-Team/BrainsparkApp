@@ -53,3 +53,7 @@
     flex-direction: column;
     margin-bottom: 1rem;
 }
+
+.form-check-input {
+    margin-top: 7px;
+}
