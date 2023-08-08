@@ -5,4 +5,10 @@
 
 @code {
     [Parameter] public string? Action { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        Console.WriteLine($"Action: {Action}");
+        base.OnParametersSet();
+    }
 }
