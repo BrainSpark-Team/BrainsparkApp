@@ -89,11 +89,12 @@
 						{
 							<p class="text-danger">Please fill in all input fields or choose a correct answer before adding to the list.</p>
 						}
-
-
 					</div>
+					
+
 				}
 			</div>
+
 			@foreach (var question in examQuestions)
 			{
 				<div class="col-12">
@@ -105,6 +106,8 @@
 						}
 					</ul>
 					<p>Correct Option: @question.CorrectOption</p>
+					<button @onclick="() => EditQuestion(question)">Edit</button>
+					<button @onclick="() => DeleteQuestion(question)">Delete</button>
 				</div>
 			}
 
@@ -194,5 +197,21 @@
 		inputValue4 = "";
 		selectedOption = 0;
 	}
+
+	private void EditQuestion(ExamQuestions question)
+	{
+		Question = question.ExamQuestion;
+		inputValue1 = question.Options[0];
+		inputValue2 = question.Options[1];
+		inputValue3 = question.Options[2];
+		inputValue4 = question.Options[3];
+		selectedOption = question.CorrectOption;
+
+		examQuestions.Remove(question);
+	}
 	
+	private void DeleteQuestion(ExamQuestions question)
+	{
+		examQuestions.Remove(question);
+	}
 }
