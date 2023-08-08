@@ -1,4 +1,6 @@
 ﻿
+using BrainSpark.Client.Shared;
+
 namespace BrainSpark.Client.Services
 {
 	public class ExamService : IExamService
@@ -12,12 +14,11 @@ namespace BrainSpark.Client.Services
 
 		public async Task GetExamCategories()
 		{
-			var result = await _http.GetFromJsonAsync<List<ExamCategory>>("api/product");
-			if (result != null)
+			var result = await _http.GetFromJsonAsync<ServiceResponse<List<ExamCategory>>>("api/exam");
+			if (result != null && result.Data != null)
 			{
-				ExamCategories = result;
+				ExamCategories = result.Data;
 			}
 		}
 	}
 }
-
