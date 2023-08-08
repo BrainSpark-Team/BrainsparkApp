@@ -84,6 +84,7 @@
 							}
 						</div>
 						<button @onclick="AddToInputList">Add to List</button>
+						
 
 						@if (showErrorMessage)
 						{
@@ -106,19 +107,20 @@
 						}
 					</ul>
 					<p>Correct Option: @question.CorrectOption</p>
-					<button @onclick="() => EditQuestion(question)">Edit</button>
-					<button @onclick="() => DeleteQuestion(question)">Delete</button>
+					<button disabled="@isEditing" @onclick="() => EditQuestion(question)">Edit</button>
+					<button disabled="@isEditing" @onclick="() => DeleteQuestion(question)">Delete</button>
 				</div>
 			}
-
 		</div>
 	</div>
 </div>
 
 @code {
 
+	private bool isEditing = false;
 	private int selectedOption = 0;
 	private bool showErrorMessage = false;
+
 
 	private bool IsOptionSelected(int optionNumber)
 	{
@@ -160,13 +162,14 @@
 	private bool AnyInputIsEmpty()
 	{
 		return string.IsNullOrWhiteSpace(inputValue1) ||
-			   string.IsNullOrWhiteSpace(inputValue2) ||
-			   string.IsNullOrWhiteSpace(inputValue3) ||
-			   string.IsNullOrWhiteSpace(inputValue4);
+						string.IsNullOrWhiteSpace(inputValue2) ||
+						string.IsNullOrWhiteSpace(inputValue3) ||
+						string.IsNullOrWhiteSpace(inputValue4);
 	}
 
 	private void AddToInputList()
 	{
+		isEditing = false;
 		if (AnyInputIsEmpty() || selectedOption == 0)
 		{
 			showErrorMessage = true;
@@ -200,6 +203,8 @@
 
 	private void EditQuestion(ExamQuestions question)
 	{
+		isEditing = true;
+
 		Question = question.ExamQuestion;
 		inputValue1 = question.Options[0];
 		inputValue2 = question.Options[1];
