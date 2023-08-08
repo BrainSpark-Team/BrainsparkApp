@@ -1,6 +1,10 @@
-.container-fluid{
+.container-fluid {
     display: flex;
     margin: 0;
+    background: #FFF;
+    box-shadow: 0px 2px 5px 0px rgba(158,148,148,0.34);
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(158,148,148,0.34);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(158,148,148,0.34);
 }
 
 .collapse.navbar-collapse{
@@ -10,11 +14,19 @@
 .logo {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
 }
 
+.navbar{
+    padding: 0;
+}
 .navbar-brand {
-    max-width: 20%;
+    max-width: 10%;
+    min-width: 5%;
     margin: 0;
+    padding: 0;
 }
 
 .connect-text{
@@ -46,6 +58,11 @@
     font-weight: 400;
 }
 
+.navbar-nav {
+    align-items: center;
+    padding: 0px 10px;
+}
+
 .login-button {
     width: 97px;
     height: 45px;
@@ -55,10 +72,15 @@
     color: #ffffff;
 }
 
+.login-button:hover {
+    background: #F36224;
+    transition: ease-in, 0.3s;
+}
+
 .search-button {
     width: 97px;
     height: 45px;
-    border-radius: 6px;
+    border-radius: 0px 9px 9px 0px;
     background: #FF8551;
     border: none;
     color: #ffffff;
@@ -66,14 +88,18 @@
     font-weight: 400;
 }
 
+.search-button:hover {
+    background: #F36224;
+    transition: ease-in, 0.3s;
+}
+
 .search-bar {
     max-height: 45px;
     border: 1.8px solid #D9D9D9;
     padding: 20px;
     gap: 10px;
-    border-radius: 12px;
+    border-radius: 9px 0px 0px 9px;
     background: var(--input-field-background, #F2F4F8);
-    color: #959595;
     outline: none;
 }
 
@@ -87,7 +113,7 @@
     align-content: flex-end;
 }
 
-@media (min-width: 641px) {
+@media (min-width: 1034px) {
     .navbar-toggler {
         display: none;
     }
@@ -102,13 +128,20 @@
         height: calc(100vh - 3.5rem);
         overflow-y: auto;
     }
+
+    .logo {
+        width: auto;
+        justify-content: flex-start;
+    }
+
+    .navbar-brand {
+        max-width: 10%;
+        min-width: 5%;
+    }
 }
 
-
-
-
-.navbar .nav-item .nav-link {
-    color: red !important;
-
-   margin-bottom: 10rem !important;
+@media (max-width: 412px){
+    .connect-text{
+        display: none;
+    }
 }
