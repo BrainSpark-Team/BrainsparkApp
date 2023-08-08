@@ -37,29 +37,35 @@
 							<label for="ans1">Option 1</label>
 							<div class="form-check d-inline">
 								<input class="w-100" id="ans1" type="text" @bind="inputValue1" placeholder="Option 1" />
-								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" @onclick="() => UpdateSelectedOption(1)" checked="@IsOptionSelected(1)">
 							</div>
 						</div>
 						<div class="in-grp">
 							<label for="ans2">Option 2</label>
 							<div class="form-check d-inline">
 								<input class="w-100" id="ans2" type="text" @bind="inputValue2" placeholder="Option 2" />
-								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" @onclick="() => UpdateSelectedOption(2)" checked="@IsOptionSelected(2)">
 							</div>
 						</div>
 						<div class="in-grp">
 							<label for="ans3">Option 3</label>
 							<div class="form-check d-inline">
 								<input class="w-100" id="ans3" type="text" @bind="inputValue3" placeholder="Option 3" />
-								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" @onclick="() => UpdateSelectedOption(3)" checked="@IsOptionSelected(3)">
 							</div>
 						</div>
 						<div class="in-grp">
 							<label for="ans4">Option 4</label>
 							<div class="form-check d-inline">
 								<input class="w-100" id="ans4" type="text" @bind="inputValue4" placeholder="Option 4" />
-								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" @onclick="() => UpdateSelectedOption(4)" checked="@IsOptionSelected(4)">
 							</div>
+						</div>
+						<div class="selected-option">
+							@if (selectedOption != 0)
+							{
+								<p>Correct Answer: @selectedOption</p>
+							}
 						</div>
 						<button @onclick="AddToInputList">Add to List</button>
 					</div>
@@ -77,6 +83,25 @@
 </div>
 
 @code {
+
+	private int selectedOption = 0;
+
+	private bool IsOptionSelected(int optionNumber)
+	{
+		return selectedOption == optionNumber;
+	}
+
+	private void UpdateSelectedOption(int optionNumber)
+	{
+		if (IsOptionSelected(optionNumber))
+		{
+			selectedOption = 0; 
+		}
+		else
+		{
+			selectedOption = optionNumber;
+		}
+	}
 
 	private int activeButton = 0;
 
@@ -99,16 +124,25 @@
 
 	private void AddToInputList()
 	{
-		inputList.Add(ExamTitle);
-		inputList.Add(inputValue1);
-		inputList.Add(inputValue2);
-		inputList.Add(inputValue3);
-		inputList.Add(inputValue4);
+		if (selectedOption != 0 && ExamTitle.Length > 0 && inputValue1.Length > 0 && inputValue2.Length > 0 && inputValue3.Length > 0 && inputValue4.Length > 0)
+		{
+			inputList.Add(ExamTitle);
+			inputList.Add(inputValue1);
+			inputList.Add(inputValue2);
+			inputList.Add(inputValue3);
+			inputList.Add(inputValue4);
+			inputList.Add(selectedOption);
 
-		ExamTitle = "";
-		inputValue1 = "";
-		inputValue2 = "";
-		inputValue3 = "";
-		inputValue4 = "";
+			ExamTitle = "";
+			inputValue1 = "";
+			inputValue2 = "";
+			inputValue3 = "";
+			inputValue4 = "";
+			selectedOption = 0;
+		}
+		else
+		{
+			
+		}
 	}
 }
