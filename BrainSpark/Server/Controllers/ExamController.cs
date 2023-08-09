@@ -12,6 +12,7 @@ namespace BrainSpark.Server.Controllers
     {
         new  ExamCategory
         {
+            CategoryId = 0,
             ImgUrl = "/Images/img1.jpg",
             ImgAlt = "Nature picture",
             TimeLimit = "No time limit",
@@ -21,7 +22,8 @@ namespace BrainSpark.Server.Controllers
         },
         new  ExamCategory
         {
-            ImgUrl = "/Images/img1.jpg",
+			CategoryId = 1,
+			ImgUrl = "/Images/img2.jpg",
             TimeLimit = "No time limit",
             Title = "Nature Exam2",
             Questions = 15,
@@ -29,7 +31,8 @@ namespace BrainSpark.Server.Controllers
         },
         new  ExamCategory
         {
-            ImgUrl = "/Images/img1.jpg",
+            CategoryId = 2,
+            ImgUrl = "/Images/img2.jpg",
             TimeLimit = "No time limit",
             Title = "Nature Exam3",
             Questions = 12,
@@ -37,6 +40,7 @@ namespace BrainSpark.Server.Controllers
         },
         new  ExamCategory
         {
+            CategoryId = 3,
             ImgUrl = "/Images/img1.jpg",
             TimeLimit = "No time limit",
             Title = "Nature Exam4",
@@ -45,6 +49,7 @@ namespace BrainSpark.Server.Controllers
         },
         new  ExamCategory
         {
+            CategoryId = 4,
             ImgUrl = "/Images/img1.jpg",
             TimeLimit = "No time limit",
             Title = "Nature Exam5",
@@ -56,5 +61,20 @@ namespace BrainSpark.Server.Controllers
         public async Task<IActionResult> GetCategories() {
             return Ok(Categories);
         }
-    }
+
+		[HttpGet("{categoryId}")]
+		public async Task<IActionResult> GetCategory(int categoryId)
+		{
+			ExamCategory category = Categories.FirstOrDefault(c => c.CategoryId == categoryId);
+
+			if (category != null)
+			{
+				return Ok(category);
+			}
+			else
+			{
+				return NotFound();
+			}
+		}
+	}
 }

@@ -4,29 +4,36 @@
 <TopSection />
 
 <div class="container mx-auto mt-5">
-    <div class="categories-title">Categories</div>
+	<div class="categories-title">Categories</div>
 </div>
 
 
 <div class="container">
-    <div class="row">
-        @foreach (var exam in Categories)
-        {
-            <div class="col-12 col-md-6 col-lg-4">
-                <CategoriesCard ImgUrl="@exam.ImgUrl" ImgAlt="@exam.ImgAlt" Title="@exam.Title" Difficulty="@exam.Difficulty" Questions="@exam.Questions" />
-            </div>
-        }
-    </div>
+	<div class="row">
+		@if (Categories != null || Categories.Count > 0)
+		{
+			@foreach (var exam in Categories)
+			{
+				<div class="col-12 col-md-6 col-lg-4">
+					<CategoriesCard CategoryId="exam.CategoryId" ImgUrl="@exam.ImgUrl" ImgAlt="@exam.ImgAlt" Title="@exam.Title" Difficulty="@exam.Difficulty" Questions="@exam.Questions" />
+				</div>
+			}
+		}
+		else
+		{
+			<div class="mx-auto my-auto">Loading...</div>
+		}
+	</div>
 </div>
 @code {
-    private static List<ExamCategory> Categories = new List<ExamCategory>();
+	private static List<ExamCategory> Categories = new List<ExamCategory>();
 
-    protected override async Task OnInitializedAsync()
-    {
-        var result = await Http.GetFromJsonAsync<List<ExamCategory>>("api/exam");
-        if (result != null)
-        {
-            Categories = result;
-        }
-    }
+	protected override async Task OnInitializedAsync()
+	{
+		var result = await Http.GetFromJsonAsync<List<ExamCategory>>("api/exam");
+		if (result != null)
+		{
+			Categories = result;
+		}
+	}
 }
