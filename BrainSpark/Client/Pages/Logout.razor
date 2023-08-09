@@ -5,9 +5,8 @@
 <h3>Logging out...</h3>
 
 @code {
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        // Navigate to Azure AD B2C's logout endpoint
-        NavigationManager.NavigateTo("authentication/logout", forceLoad: true);
+        NavigationManager.NavigateToLogout("authentication/logout");
     }
 }
