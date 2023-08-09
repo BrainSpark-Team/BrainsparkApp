@@ -1,0 +1,12 @@
+@page "/authentication/logout"
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@inject NavigationManager NavigationManager
+
+<h3>Logging out...</h3>
+
+@code {
+    protected override void OnInitialized()
+    {
+        NavigationManager.NavigateToLogout("authentication/logout");
+    }
+}
