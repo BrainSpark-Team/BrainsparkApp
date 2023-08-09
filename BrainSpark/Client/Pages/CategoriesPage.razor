@@ -1,66 +1,32 @@
 ﻿@page "/categories"
-@inject IExamService ExamService
+@inject HttpClient Http
+
 <TopSection />
 
 <div class="container mx-auto mt-5">
-	<div class="categories-title">Categories</div>
+    <div class="categories-title">Categories</div>
 </div>
 
 
 <div class="container">
-	<div class="row">
-		@foreach (var exam in Categories)
-		{
-		<div class="col-12 col-md-6 col-lg-4">
-			<CategoriesCard ImgUrl="@exam.ImgUrl" ImgAlt="@exam.ImgAlt" Title="@exam.Title" Difficulty="@exam.Difficulty" Questions="@exam.Questions"/>
-		</div>
-		}
-	</div>
+    <div class="row">
+        @foreach (var exam in Categories)
+        {
+            <div class="col-12 col-md-6 col-lg-4">
+                <CategoriesCard ImgUrl="@exam.ImgUrl" ImgAlt="@exam.ImgAlt" Title="@exam.Title" Difficulty="@exam.Difficulty" Questions="@exam.Questions" />
+            </div>
+        }
+    </div>
 </div>
 @code {
-	private static List<ExamCategory> Categories = new List<ExamCategory>
-	{
-		new  ExamCategory
-		{
-			ImgUrl = "/Images/img1.jpg",
-			ImgAlt = "Nature picture",
-			TimeLimit = "No time limit",
-			Title = "Nature Exam",
-			Questions = 20,
-			Difficulty = "Easy"
-		},
-		new  ExamCategory
-		{
-			ImgUrl = "/Images/img1.jpg",
-			TimeLimit = "No time limit",
-			Title = "Nature Exam2",
-			Questions = 15,
-			Difficulty = "Easy"
-		},
-		new  ExamCategory
-		{
-			ImgUrl = "/Images/img1.jpg",
-			TimeLimit = "No time limit",
-			Title = "Nature Exam3",
-			Questions = 12,
-			Difficulty = "Easy"
-		},
-		new  ExamCategory
-		{
-			ImgUrl = "/Images/img1.jpg",
-			TimeLimit = "No time limit",
-			Title = "Nature Exam4",
-			Questions = 12,
-			Difficulty = "Easy"
-		},
-		new  ExamCategory
-		{
-			ImgUrl = "/Images/img1.jpg",
-			TimeLimit = "No time limit",
-			Title = "Nature Exam5",
-			Questions = 12,
-			Difficulty = "Easy"
-		}
-	};
+    private static List<ExamCategory> Categories = new List<ExamCategory>();
 
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await Http.GetFromJsonAsync<List<ExamCategory>>("api/exam");
+        if (result != null)
+        {
+            Categories = result;
+        }
+    }
 }
