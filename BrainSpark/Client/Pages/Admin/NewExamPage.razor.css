@@ -19,6 +19,7 @@
 .exam-container {
     background-color: #F9F6FF;
     border-radius: 6px;
+    margin-bottom: 5rem;
 }
 
 .add-new-container {
@@ -61,3 +62,15 @@
 .error-input {
     border: 2px solid red;
 }
+
+input[type=text] {
+    border: none;
+    border-bottom: 1px solid #747475;
+    padding: 2px 3px;
+}
+
+    input[type=text]:focus {
+        border-bottom: 1px solid #FF7A00;
+        color: red;
+        outline: none;
+    }
