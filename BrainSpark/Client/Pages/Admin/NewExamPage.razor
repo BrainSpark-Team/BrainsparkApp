@@ -17,7 +17,7 @@
 			</div>
 			<div class="form-check">
 			</div>
-			<h1 contenteditable="true" class="text-center mb-4">Untitled Exam</h1>
+			<h1 contenteditable="true" class="text-center mb-4" @bind="ExamTitle">Untitled Exam</h1>
 			<div class="col-12 add-new-container p-0 p-md-3 d-flex">
 				<div class="add-btn-container">
 					<button class="@(IsActiveButton(1) ? "active-button" : "") ms-0 ms-md-4" @onclick="() => ToggleActive(1)">Single Choice</button>
@@ -31,52 +31,113 @@
 					<div class="input-boxes">
 						<div class="in-grp">
 							<label for="question">Question</label>
-							<input id="question" type="text" @bind="ExamTitle" placeholder="Question" />
+							<input id="question" type="text" @bind="Question" placeholder="Question" />
 						</div>
 						<div class="in-grp">
 							<label for="ans1">Option 1</label>
 							<div class="form-check d-inline">
-								<input class="w-100" id="ans1" type="text" @bind="inputValue1" placeholder="Option 1" />
-								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+								<input class="w-100 @(showErrorMessage && string.IsNullOrWhiteSpace(inputValue1) ? "error-input" : "")" id="ans1" type="text" @bind="inputValue1" placeholder="Option 1" />
+								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" @onclick="() => UpdateSelectedOption(1)" checked="@IsOptionSelected(1)">
+								@if (showErrorMessage && string.IsNullOrWhiteSpace(inputValue1))
+								{
+									<span class="text-danger placeholder-text">Please write something here</span>
+								}
 							</div>
 						</div>
 						<div class="in-grp">
 							<label for="ans2">Option 2</label>
 							<div class="form-check d-inline">
-								<input class="w-100" id="ans2" type="text" @bind="inputValue2" placeholder="Option 2" />
-								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+								<input class="w-100 @(showErrorMessage && string.IsNullOrWhiteSpace(inputValue2) ? "error-input" : "")" id="ans2" type="text" @bind="inputValue2" placeholder="Option 2" />
+								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" @onclick="() => UpdateSelectedOption(2)" checked="@IsOptionSelected(2)">
+								@if (showErrorMessage && string.IsNullOrWhiteSpace(inputValue2))
+								{
+									<span class="text-danger placeholder-text">Please write something here</span>
+								}
 							</div>
 						</div>
 						<div class="in-grp">
 							<label for="ans3">Option 3</label>
 							<div class="form-check d-inline">
-								<input class="w-100" id="ans3" type="text" @bind="inputValue3" placeholder="Option 3" />
-								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+								<input class="w-100 @(showErrorMessage && string.IsNullOrWhiteSpace(inputValue3) ? "error-input" : "")" id="ans3" type="text" @bind="inputValue3" placeholder="Option 3" />
+								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" @onclick="() => UpdateSelectedOption(3)" checked="@IsOptionSelected(3)">
+								@if (showErrorMessage && string.IsNullOrWhiteSpace(inputValue3))
+								{
+									<span class="text-danger placeholder-text">Please write something here</span>
+								}
 							</div>
 						</div>
 						<div class="in-grp">
 							<label for="ans4">Option 4</label>
 							<div class="form-check d-inline">
-								<input class="w-100" id="ans4" type="text" @bind="inputValue4" placeholder="Option 4" />
-								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+								<input class="w-100 @(showErrorMessage && string.IsNullOrWhiteSpace(inputValue4) ? "error-input" : "")" id="ans4" type="text" @bind="inputValue4" placeholder="Option 4" />
+								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" @onclick="() => UpdateSelectedOption(4)" checked="@IsOptionSelected(4)">
+								@if (showErrorMessage && string.IsNullOrWhiteSpace(inputValue4))
+								{
+									<span class="text-danger placeholder-text">Please write something here</span>
+								}
 							</div>
 						</div>
+						<div class="selected-option">
+							@if (selectedOption != 0)
+							{
+								<p>Correct Answer: @selectedOption</p>
+							}
+						</div>
 						<button @onclick="AddToInputList">Add to List</button>
+						
+
+						@if (showErrorMessage)
+						{
+							<p class="text-danger">Please fill in all input fields or choose a correct answer before adding to the list.</p>
+						}
 					</div>
+					
+
 				}
 			</div>
-			@foreach (var divText in inputList)
+
+			@foreach (var question in examQuestions)
 			{
-				<div class="dynamic-div">
-					@divText
+				<div class="col-12">
+					<h3>@question.ExamQuestion</h3>
+					<ul>
+						@foreach (var option in question.Options)
+						{
+							<li>@option</li>
+						}
+					</ul>
+					<p>Correct Option: @question.CorrectOption</p>
+					<button disabled="@isEditing" @onclick="() => EditQuestion(question)">Edit</button>
+					<button disabled="@isEditing" @onclick="() => DeleteQuestion(question)">Delete</button>
 				</div>
 			}
-
 		</div>
 	</div>
 </div>
 
 @code {
+
+	private bool isEditing = false;
+	private int selectedOption = 0;
+	private bool showErrorMessage = false;
+
+
+	private bool IsOptionSelected(int optionNumber)
+	{
+		return selectedOption == optionNumber;
+	}
+
+	private void UpdateSelectedOption(int optionNumber)
+	{
+		if (IsOptionSelected(optionNumber))
+		{
+			selectedOption = 0; 
+		}
+		else
+		{
+			selectedOption = optionNumber;
+		}
+	}
 
 	private int activeButton = 0;
 
@@ -90,25 +151,72 @@
 		activeButton = IsActiveButton(buttonNumber) ? 0 : buttonNumber;
 	}
 	private string ExamTitle = "";
+	private string Question = "";
 	private string inputValue1 = "";
 	private string inputValue2 = "";
 	private string inputValue3 = "";
 	private string inputValue4 = "";
 
-	private List<object> inputList = new List<object>();
+	private List<ExamQuestions> examQuestions = new List<ExamQuestions>();
+
+	private bool AnyInputIsEmpty()
+	{
+		return string.IsNullOrWhiteSpace(inputValue1) ||
+						string.IsNullOrWhiteSpace(inputValue2) ||
+						string.IsNullOrWhiteSpace(inputValue3) ||
+						string.IsNullOrWhiteSpace(inputValue4);
+	}
 
 	private void AddToInputList()
 	{
-		inputList.Add(ExamTitle);
-		inputList.Add(inputValue1);
-		inputList.Add(inputValue2);
-		inputList.Add(inputValue3);
-		inputList.Add(inputValue4);
+		isEditing = false;
+		if (AnyInputIsEmpty() || selectedOption == 0)
+		{
+			showErrorMessage = true;
 
-		ExamTitle = "";
+			return;
+		}
+
+		showErrorMessage = false;
+
+		var newQuestion = new ExamQuestions{
+				ExamQuestion = Question,
+				Options = new List<string>
+			{
+				inputValue1,
+				inputValue2,
+				inputValue3,
+				inputValue4
+			},
+				CorrectOption = selectedOption
+		};
+
+		examQuestions.Add(newQuestion);
+
+		Question = "";
 		inputValue1 = "";
 		inputValue2 = "";
 		inputValue3 = "";
 		inputValue4 = "";
+		selectedOption = 0;
+	}
+
+	private void EditQuestion(ExamQuestions question)
+	{
+		isEditing = true;
+
+		Question = question.ExamQuestion;
+		inputValue1 = question.Options[0];
+		inputValue2 = question.Options[1];
+		inputValue3 = question.Options[2];
+		inputValue4 = question.Options[3];
+		selectedOption = question.CorrectOption;
+
+		examQuestions.Remove(question);
+	}
+	
+	private void DeleteQuestion(ExamQuestions question)
+	{
+		examQuestions.Remove(question);
 	}
 }

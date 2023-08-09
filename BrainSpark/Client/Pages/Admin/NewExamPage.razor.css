@@ -57,3 +57,7 @@
 .form-check-input {
     margin-top: 7px;
 }
+
+.error-input {
+    border: 2px solid red;
+}
