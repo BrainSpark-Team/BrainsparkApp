@@ -36,8 +36,16 @@
 						<div class="in-grp">
 							<label for="ans1">Answer 1</label>
 							<div class="form-check d-inline">
-								<input class="text-bar w-100 @(showErrorMessage && string.IsNullOrWhiteSpace(inputValue1) ? "error-input" : "")" id="ans1" type="text" @bind="inputValue1" placeholder="Write the answer" />
-								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" @onclick="() => UpdateSelectedOption(1)" checked="@IsOptionSelected(1)">
+								<div class="flex-check">
+									<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" @onclick="() => UpdateSelectedOption(1)" checked="@IsOptionSelected(1)">
+									<input class="text-bar w-100 @(showErrorMessage && string.IsNullOrWhiteSpace(inputValue1) ? "error-input" : "")" id="ans1" type="text" @bind="inputValue1" placeholder="Write the answer" />
+									<div class="selected-option">
+										@if (selectedOption == 1)
+										{
+											<i class="check-mark fa-solid fa-check fa-xl" style="color: #156523;"></i>
+										}
+									</div>
+								</div>
 								@if (showErrorMessage && string.IsNullOrWhiteSpace(inputValue1))
 								{
 									<span class="text-danger placeholder-text">Please write something here</span>
@@ -47,19 +55,36 @@
 						<div class="in-grp">
 							<label for="ans2">Answer 2</label>
 							<div class="form-check d-inline">
-								<input class="text-bar w-100 @(showErrorMessage && string.IsNullOrWhiteSpace(inputValue2) ? "error-input" : "")" id="ans2" type="text" @bind="inputValue2" placeholder="Write the answer" />
-								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" @onclick="() => UpdateSelectedOption(2)" checked="@IsOptionSelected(2)">
+								<div class="flex-check">
+									<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" @onclick="() => UpdateSelectedOption(2)" checked="@IsOptionSelected(2)">
+									<input class="text-bar w-100 @(showErrorMessage && string.IsNullOrWhiteSpace(inputValue2) ? "error-input" : "")" id="ans2" type="text" @bind="inputValue2" placeholder="Write the answer" />
+									<div class="selected-option">
+										@if (selectedOption == 2)
+										{
+											<i class="check-mark fa-solid fa-check fa-xl" style="color: #156523;"></i>
+										}
+									</div>
+								</div>
 								@if (showErrorMessage && string.IsNullOrWhiteSpace(inputValue2))
 								{
 									<span class="text-danger placeholder-text">Please write something here</span>
 								}
 							</div>
 						</div>
+
 						<div class="in-grp">
 							<label for="ans3">Answer 3</label>
 							<div class="form-check d-inline">
-								<input class="text-bar w-100 @(showErrorMessage && string.IsNullOrWhiteSpace(inputValue3) ? "error-input" : "")" id="ans3" type="text" @bind="inputValue3" placeholder="Write the answer" />
-								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" @onclick="() => UpdateSelectedOption(3)" checked="@IsOptionSelected(3)">
+								<div class="flex-check">
+									<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" @onclick="() => UpdateSelectedOption(3)" checked="@IsOptionSelected(3)">
+									<input class="text-bar w-100 @(showErrorMessage && string.IsNullOrWhiteSpace(inputValue3) ? "error-input" : "")" id="ans3" type="text" @bind="inputValue3" placeholder="Write the answer" />
+									<div class="selected-option">
+										@if (selectedOption == 3)
+										{
+											<i class="check-mark fa-solid fa-check fa-xl" style="color: #156523;"></i>
+										}
+									</div>
+								</div>
 								@if (showErrorMessage && string.IsNullOrWhiteSpace(inputValue3))
 								{
 									<span class="text-danger placeholder-text">Please write something here</span>
@@ -69,21 +94,24 @@
 						<div class="in-grp">
 							<label for="ans4">Answer 4</label>
 							<div class="form-check d-inline">
-								<input class="text-bar w-100 @(showErrorMessage && string.IsNullOrWhiteSpace(inputValue4) ? "error-input" : "")" id="ans4" type="text" @bind="inputValue4" placeholder="Write the answer" />
-								<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" @onclick="() => UpdateSelectedOption(4)" checked="@IsOptionSelected(4)">
+								<div class="flex-check">
+									<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" @onclick="() => UpdateSelectedOption(4)" checked="@IsOptionSelected(4)">
+									<input class="text-bar w-100 @(showErrorMessage && string.IsNullOrWhiteSpace(inputValue4) ? "error-input" : "")" id="ans4" type="text" @bind="inputValue4" placeholder="Write the answer" />
+									<div class="selected-option">
+										@if (selectedOption == 4)
+										{
+											<i class="check-mark fa-solid fa-check fa-xl" style="color: #156523;"></i>
+										}
+									</div>
+								</div>
 								@if (showErrorMessage && string.IsNullOrWhiteSpace(inputValue4))
 								{
 									<span class="text-danger placeholder-text">Please write something here</span>
 								}
 							</div>
 						</div>
-						<div class="selected-option">
-							@if (selectedOption != 0)
-							{
-								<p>Correct Answer: @selectedOption</p>
-							}
-						</div>
-						<button @onclick="AddToInputList">Add to List</button>
+						
+						<button class="add-question-button" @onclick="AddToInputList">Add question</button>
 						
 
 						@if (showErrorMessage)
@@ -91,24 +119,32 @@
 							<p class="text-danger">Please fill in all input fields or choose a correct answer before adding to the list.</p>
 						}
 					</div>
-					
-
 				}
-			</div>
+				
+				</div>
 
 			@foreach (var question in examQuestions)
 			{
-				<div class="col-12">
-					<h3>@question.ExamQuestion</h3>
+				count = 0;
+				<div class="list-items">
+					<div class="list-header"> 
+						<h3><span class="first-text">Question:</span> @question.ExamQuestion</h3>
+						<div class="buttons">
+							<button class="menu-buttons" disabled="@isEditing" @onclick="() => EditQuestion(question)"><i class="fa-solid fa-pen-to-square fa-xl" style="color: #515761;"></i></button>
+							<button class="menu-buttons" disabled="@isEditing" @onclick="() => MoveQuestionUp(question)"><i class="fa-solid fa-arrow-up fa-xl" style="color: #515761;"></i></button>
+							<button class="menu-buttons" disabled="@isEditing" @onclick="() => MoveQuestionDown(question)"><i class="fa-solid fa-arrow-down fa-xl" style="color: #515761;"></i></button>
+							<button class="menu-buttons" disabled="@isEditing" @onclick="() => DeleteQuestion(question)"><i class="fa-solid fa-trash fa-xl" style="color: #515761;"></i></button>
+						</div>
+					</div>
 					<ul>
 						@foreach (var option in question.Options)
 						{
-							<li>@option</li>
+							count++;
+							<li><span class="first-text">Answer @count: </span>@option</li>
 						}
 					</ul>
-					<p>Correct Option: @question.CorrectOption</p>
-					<button disabled="@isEditing" @onclick="() => EditQuestion(question)">Edit</button>
-					<button disabled="@isEditing" @onclick="() => DeleteQuestion(question)">Delete</button>
+
+					<p><span class="first-text">Correct Option:</span> @question.CorrectOption</p>
 				</div>
 			}
 		</div>
@@ -116,7 +152,7 @@
 </div>
 
 @code {
-
+	private int count = 0;
 	private bool isEditing = false;
 	private int selectedOption = 0;
 	private bool showErrorMessage = false;
@@ -214,7 +250,28 @@
 
 		examQuestions.Remove(question);
 	}
-	
+
+	private void MoveQuestionUp(ExamQuestions question)
+	{
+		int currentIndex = examQuestions.IndexOf(question);
+		if (currentIndex > 0)
+		{
+			examQuestions.RemoveAt(currentIndex);
+			examQuestions.Insert(currentIndex - 1, question);
+		}
+	}
+
+	private void MoveQuestionDown(ExamQuestions question)
+	{
+		int currentIndex = examQuestions.IndexOf(question);
+		if (currentIndex < examQuestions.Count - 1)
+		{
+			examQuestions.RemoveAt(currentIndex);
+			examQuestions.Insert(currentIndex + 1, question);
+		}
+	}
+
+
 	private void DeleteQuestion(ExamQuestions question)
 	{
 		examQuestions.Remove(question);
