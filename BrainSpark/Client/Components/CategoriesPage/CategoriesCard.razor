@@ -1,9 +1,9 @@
 ﻿<div class="category-card">
-	<NavLink class="cat-link" href="@CategoryId">
+	<NavLink class="cat-link" href="@GetLink()">
 		<img src="@ImgUrl" alt="@ImgAlt" class="card-img" />
 	</NavLink>
 	<div class="details-container">
-		<NavLink class="cat-link" href="@CategoryId">
+		<NavLink class="cat-link" href="@GetLink()">
 			<div class="title">
 				@Title <img src="/Images/leaf.svg" alt="leaf icon" />
 			</div>
@@ -13,7 +13,7 @@
 		<p><img src="/Images/chart.svg" alt="chart icon" /> Difficulty @Difficulty</p>
 		<p><img src="/Images/chart.svg" alt="chart icon" /> Ipsum</p>
 		<p><img src="/Images/chart.svg" alt="chart icon" /> Ipsum</p>
-		<NavLink class="cat-link" href="@CategoryId">
+		<NavLink class="cat-link" href="@GetLink()">
 			<button>
 				View
 			</button>
@@ -38,5 +38,14 @@
 	public int Questions { get; set; }
 
 	[Parameter]
-	public int CategoryId { get; set; }
+	public string CategoryType { get; set; } = string.Empty;
+
+
+
+	private string GetLink()
+	{
+		return $"/category/{this.CategoryType}";
+	}
+
+
 }
