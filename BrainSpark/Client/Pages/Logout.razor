@@ -1,12 +1,22 @@
 @page "/authentication/logout"
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 @inject NavigationManager NavigationManager
+@inject IAccessTokenProvider AccessTokenProvider
+@inject SignOutSessionStateManager SignOutManager
 
 <h3>Logging out...</h3>
 
 @code {
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
+        // Clear any tokens or authentication state
+        var tokenResult = await AccessTokenProvider.RequestAccessToken();
+        if (tokenResult.TryGetToken(out var token))
+        {
+            token.Expire();
+        }
+
+        // Navigate to Azure AD B2C's logout endpoint
         NavigationManager.NavigateToLogout("authentication/logout");
     }
 }
