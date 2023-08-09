@@ -1,5 +1,7 @@
 @page "/authentication/{Action}"
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@inject NavigationManager NavigationManager
+
 
 <RemoteAuthenticatorView Action="@Action" />
 
@@ -7,8 +9,10 @@
     [Parameter] public string? Action { get; set; }
 
     protected override void OnParametersSet()
-    {
-        Console.WriteLine($"Action: {Action}");
-        base.OnParametersSet();
-    }
+{
+    Console.WriteLine($"Full URL: {NavigationManager.Uri}");
+    Console.WriteLine($"Action: {Action}");
+    base.OnParametersSet();
+}
+
 }
