@@ -2,7 +2,6 @@
 @using Microsoft.AspNetCore.Components.Authorization
 @page "/login"
 
-
 <AuthorizeView>
     <NotAuthorized>
         <button @onclick="BeginLogin">Login with Azure AD B2C</button>
@@ -14,7 +13,7 @@
 </AuthorizeView>
 
 @code {
-private void BeginLogin()
+   private void BeginLogin()
 {
     NavigationManager.NavigateTo("authentication/login");
 }
@@ -27,6 +26,4 @@ private void BeginLogout()
     [Inject] public NavigationManager NavigationManager { get; set; }
     [Inject] public AuthenticationStateProvider AuthenticationStateProvider { get; set; }
     [Inject] public RemoteAuthenticationService<RemoteAuthenticationState, RemoteUserAccount, OidcProviderOptions> AuthenticationService { get; set; }
-
-
 }

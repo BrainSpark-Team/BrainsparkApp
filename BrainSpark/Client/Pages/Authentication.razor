@@ -6,8 +6,6 @@
 
 <RemoteAuthenticatorView Action="@Action" />
 
-<button @onclick="Logout">Logout</button>
-
 @code {
     [Parameter] public string? Action { get; set; }
 
@@ -16,16 +14,5 @@
         Console.WriteLine($"Full URL: {NavigationManager.Uri}");
         Console.WriteLine($"Action: {Action}");
         base.OnParametersSet();
-    }
-
-    private void Logout()
-    {
-        var tenantName = "brainsparkdemo";  // Replace with your tenant name
-        var policyName = "B2C_1_signupsignin";  // Replace with your policy name
-        var postLogoutRedirectUri = "https://ashy-desert-0eae5c503.3.azurestaticapps.net/authentication/logout";  // Replace with your post-logout redirect URI if different
-
-        var logoutUrl = $"https://{tenantName}.b2clogin.com/{tenantName}.onmicrosoft.com/{policyName}/oauth2/v2.0/logout?p={policyName}&post_logout_redirect_uri={Uri.EscapeDataString(postLogoutRedirectUri)}";
-
-        NavigationManager.NavigateTo(logoutUrl, forceLoad: true);
     }
 }
