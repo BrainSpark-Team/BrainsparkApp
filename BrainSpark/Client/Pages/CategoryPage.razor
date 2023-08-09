@@ -1,4 +1,4 @@
-﻿@page "/category/{Category}"
+﻿@page "/category/{CategoryId:int}"
 
 <div class="container">
 	<div class="row">
@@ -20,12 +20,13 @@
 
 @code {
 	[Parameter]
-	public string Category { get; set; } = string.Empty;
+	public int Category { get; set; }
 
 	private static List<ExamCategory> Categories = new List<ExamCategory>
 	{
 		new  ExamCategory
 		{
+			CategoryId = 0,
 			ImgUrl = "/Images/img1.jpg",
 			ImgAlt = "Nature picture",
 			TimeLimit = "No time limit",
@@ -35,6 +36,7 @@
 		},
 		new  ExamCategory
 		{
+			CategoryId = 1,
 			ImgUrl = "/Images/img1.jpg",
 			TimeLimit = "No time limit",
 			Title = "Nature Exam2",
@@ -43,6 +45,7 @@
 		},
 		new  ExamCategory
 		{
+			CategoryId = 2,
 			ImgUrl = "/Images/img1.jpg",
 			TimeLimit = "No time limit",
 			Title = "Nature Exam3",
@@ -51,6 +54,7 @@
 		},
 		new  ExamCategory
 		{
+			CategoryId = 3,
 			ImgUrl = "/Images/img1.jpg",
 			TimeLimit = "No time limit",
 			Title = "Nature Exam4",
@@ -59,6 +63,7 @@
 		},
 		new  ExamCategory
 		{
+			CategoryId = 4,
 			ImgUrl = "/Images/img1.jpg",
 			TimeLimit = "No time limit",
 			Title = "Nature Exam5",
