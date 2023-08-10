@@ -20,7 +20,7 @@
 
 private void BeginLogout()
 {
-    NavigationManager.NavigateTo("https://brainsparkdemo.b2clogin.com/brainsparkdemo.onmicrosoft.com/B2C_1_signupsignin/oauth2/v2.0/logout?p=B2C_1_signupsignin&post_logout_redirect_uri=https://ashy-desert-0eae5c503.3.azurestaticapps.net/");
+    NavigationManager.NavigateTo("authentication/logout");
 }
 
     [Inject] public NavigationManager NavigationManager { get; set; }
