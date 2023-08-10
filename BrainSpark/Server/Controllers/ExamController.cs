@@ -13,6 +13,7 @@ namespace BrainSpark.Server.Controllers
         new  ExamCategory
         {
             CategoryId = 0,
+            CategoryType= "Nature",
             ImgUrl = "/Images/img1.jpg",
             ImgAlt = "Nature picture",
             TimeLimit = "No time limit",
@@ -23,7 +24,8 @@ namespace BrainSpark.Server.Controllers
         new  ExamCategory
         {
 			CategoryId = 1,
-			ImgUrl = "/Images/img2.jpg",
+            CategoryType= "Nature",
+            ImgUrl = "/Images/img2.jpg",
             TimeLimit = "No time limit",
             Title = "Nature Exam2",
             Questions = 15,
@@ -32,6 +34,7 @@ namespace BrainSpark.Server.Controllers
         new  ExamCategory
         {
             CategoryId = 2,
+            CategoryType= "Biology",
             ImgUrl = "/Images/img2.jpg",
             TimeLimit = "No time limit",
             Title = "Nature Exam3",
@@ -41,6 +44,7 @@ namespace BrainSpark.Server.Controllers
         new  ExamCategory
         {
             CategoryId = 3,
+            CategoryType= "Biology",
             ImgUrl = "/Images/img1.jpg",
             TimeLimit = "No time limit",
             Title = "Nature Exam4",
@@ -50,6 +54,7 @@ namespace BrainSpark.Server.Controllers
         new  ExamCategory
         {
             CategoryId = 4,
+            CategoryType= "Biology",
             ImgUrl = "/Images/img1.jpg",
             TimeLimit = "No time limit",
             Title = "Nature Exam5",
