@@ -11,3 +11,7 @@
     text-decoration: underline;
     text-underline-offset: .2rem;
 }
+
+.take-test-link {
+    text-decoration: none;
+}

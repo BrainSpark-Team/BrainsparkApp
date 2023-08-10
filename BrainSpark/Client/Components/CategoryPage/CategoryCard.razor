@@ -14,9 +14,11 @@
 		<p><img src="/Images/chart.svg" alt="chart icon" /> Difficulty @Difficulty</p>
 		<p><img src="/Images/chart.svg" alt="chart icon" /> Ipsum</p>
 		<p><img src="/Images/chart.svg" alt="chart icon" /> Ipsum</p>
+		<NavLink class="take-test-link" href="@GetLink()">
 		<button>
 			Take Test
 		</button>
+		</NavLink>
 	</div>
 </div>
 
@@ -35,4 +37,13 @@
 
 	[Parameter]
 	public int Questions { get; set; }
+
+	[Parameter]
+	public int TestId { get; set; }
+
+	private string GetLink()
+	{
+		return $"/test/{this.TestId}";
+	}
+
 }

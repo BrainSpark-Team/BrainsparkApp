@@ -92,3 +92,19 @@
     border-radius: 6px;
     text-transform: uppercase;
 }
+
+.selected-option {
+    background-color: #7EAA92;
+    color: #fff;
+    border-color: #7EAA92;
+}
+
+    .selected-option .abcd-text {
+        background-color: #fff;
+        color: #7EAA92;
+    }
+
+.progress-container .selected-button {
+    background-color: #31CD63;
+    color: #fff;
+}

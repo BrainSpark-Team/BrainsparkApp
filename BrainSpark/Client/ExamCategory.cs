@@ -2,7 +2,7 @@
 {
 	public class ExamCategory
 	{
-		public int CategoryId { get; set; }
+		public int TestId { get; set; }
 		public string CategoryType { get; set; } = string.Empty;
 		public string ImgUrl { get; set; } = string.Empty;
 		public string ImgAlt { get; set; } = string.Empty;

@@ -18,7 +18,7 @@
 			@foreach (var exam in GetFilteredExams(CategoryType))
 			{
 				<div class="col-12 col-md-12 col-lg-6">
-					<CategoryCard ImgUrl="@exam.ImgUrl" ImgAlt="@exam.ImgAlt" Title="@exam.Title" Difficulty="@exam.Difficulty" Questions="@exam.Questions" />
+					<CategoryCard TestId="@exam.TestId" ImgUrl="@exam.ImgUrl" ImgAlt="@exam.ImgAlt" Title="@exam.Title" Difficulty="@exam.Difficulty" Questions="@exam.Questions" />
 				</div>
 			}
 		}
@@ -38,7 +38,7 @@
 	{
 		new  ExamCategory
 		{
-			CategoryId = 0,
+			TestId = 1,
 			CategoryType= "Nature",
 			ImgUrl = "/Images/FlowerPic.png",
 			ImgAlt = "Nature picture",
@@ -49,7 +49,7 @@
 		},
 		new  ExamCategory
 		{
-			CategoryId = 0,
+			TestId = 2,
 			CategoryType= "Nature",
 			ImgUrl = "/Images/RiverPic.png",
 			ImgAlt = "Nature picture",
@@ -60,7 +60,7 @@
 		},
 		new  ExamCategory
 		{
-			CategoryId = 0,
+			TestId = 3,
 			CategoryType= "Nature",
 			ImgUrl = "/Images/TreePic.png",
 			ImgAlt = "Nature picture",
@@ -71,7 +71,7 @@
 		},
 		new  ExamCategory
 		{
-			CategoryId = 0,
+			TestId = 4,
 			CategoryType= "Nature",
 			ImgUrl = "/Images/MountainPic.png",
 			ImgAlt = "Nature picture",
@@ -82,7 +82,7 @@
 		},
 		new  ExamCategory
 		{
-			CategoryId = 1,
+			TestId = 5,
 			CategoryType= "Biology",
 			ImgUrl = "/Images/img2.jpg",
 			TimeLimit = "No time limit",
@@ -92,7 +92,7 @@
 		},
 		new  ExamCategory
 		{
-			CategoryId = 2,
+			TestId = 6,
 			CategoryType= "Anatomy",
 			ImgUrl = "/Images/img2.jpg",
 			TimeLimit = "No time limit",
@@ -102,7 +102,7 @@
 		},
 		new  ExamCategory
 		{
-			CategoryId = 3,
+			TestId = 7,
 			CategoryType= "Technology",
 			ImgUrl = "/Images/img1.jpg",
 			TimeLimit = "No time limit",
@@ -112,7 +112,7 @@
 		},
 		new  ExamCategory
 		{
-			CategoryId = 4,
+			TestId = 8,
 			CategoryType= "Geography",
 			ImgUrl = "/Images/img1.jpg",
 			TimeLimit = "No time limit",

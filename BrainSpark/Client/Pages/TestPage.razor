@@ -1,4 +1,5 @@
-﻿@page "/test"
+﻿@page "/test/{CurrentTestId:int}"
+@inject NavigationManager NavigationManager
 
 <div class="container-fluid test-page">
 	<div class="container">
@@ -8,37 +9,37 @@
 					<img src="/Images/medalstar.svg" alt="medal icon" /> <span class="points">200</span>
 				</div>
 				<div class="test-title">
-					Fantasy Quiz #156
+					@ExampleTest.Title
 				</div>
 				<div class="test-time">
 					25:00
 				</div>
 			</div>
 			<div class="col-12 col-md-6 mx-auto">
-				@if (ExampleTest.Questions != null)
+				@if (ExampleTest.Questions != null && CurrentQuestionIndex < ExampleTest.Questions.Count)
 				{
-					@foreach (var question in ExampleTest.Questions)
-					{
-						<div class="test-container">
-							<div class="test-question-title text-center">@question.Title</div>
-							@if (question.Options != null)
+					var question = ExampleTest.Questions[CurrentQuestionIndex];
+					<div class="test-container">
+						<div class="test-question-title text-center">@question.Questionn</div>
+						@if (question.Options != null)
+						{
+							@foreach (var (ans, index) in question.Options.Select((option, index) => (option, index)))
 							{
-								@foreach (var ans in question.Options)
-								{
-									<div class="test-question"><span class="abcd-text">@abcd[inc]</span> @ans</div>
-									inc++;
-								}
+								<div class="test-question @(index == SelectedOptionIndex ? "selected-option" : "") @(index == SelectedOptionIndex ? "selected-answer" : "")" @onclick="() => SelectOption(ans, index)">
+									<span class="abcd-text">@abcd[index]</span>
+									@ans
+								</div>
 							}
-							else
-							{
-								<div>No questions found.</div>
-							}
-						</div>
-					}
+						}
+						else
+						{
+							<div>No questions found.</div>
+						}
+					</div>
 				}
 				else
 				{
-					<div>No Test found.</div>
+					<div>No more questions or test not found.</div>
 				}
 			</div>
 		</div>
@@ -54,7 +55,12 @@
 						</div>
 						<div class="progress-value">@ProgressValue/@TotalValue</div>
 					</div>
-					<button>Continue</button>
+					<button class="btn btn-primary mr-2 @ButtonClass" @onclick="PreviousQuestion" disabled="@(CurrentQuestionIndex == 0 || OptionSelected)"><i class="fa-solid fa-angle-left"></i> Previous</button>
+					<button class="btn btn-secondary mr-2" @onclick="SkipQuestion" disabled="@(OptionSelected)">
+						Skip <i class="fa-solid fa-angles-right"></i>
+					</button>
+
+					<button class="@ButtonClass" @onclick="NextQuestion" disabled="@(!OptionSelected)">Continue <i class="fa-solid fa-angle-right"></i></button>
 				</div>
 			</div>
 		</div>
@@ -62,26 +68,138 @@
 </div>
 
 @code {
+	[Parameter]
+	public int CurrentTestId { get; set; }
+
 	private int inc = 0;
 
-	private int ProgressValue = 5;
-	private int TotalValue = 35;
+	private int ProgressValue = 0;
+	private int TotalValue => ExampleTest.Questions.Count;
 
-	private double ProgressPercentage => (double)ProgressValue / TotalValue * 100;
-
+	private double ProgressPercentage => (double)(CurrentQuestionIndex) / ExampleTest.Questions.Count * 100;
 
 	private string[] abcd = new string[] { "a", "b", "c", "d" };
 
+	private int CurrentQuestionIndex = 0;
+
+	private bool OptionSelected = false;
+
+
+	private string SelectedOption = string.Empty;
+
+	private int SelectedOptionIndex = -1;
+
+	string ButtonClass => OptionSelected ? "selected-button" : "";
+
+
+
+	private Dictionary<int, List<int>> SelectedOptionIndices = new Dictionary<int, List<int>>();
+
+	private void SelectOption(string option, int index)
+	{
+		OptionSelected = true;
+		SelectedOption = option;
+		SelectedOptionIndex = index;
+
+		if (!SelectedOptionIndices.ContainsKey(CurrentQuestionIndex))
+		{
+			SelectedOptionIndices[CurrentQuestionIndex] = new List<int>();
+		}
+
+		SelectedOptionIndices[CurrentQuestionIndex].Add(index);
+	}
+
+
+
+
+	private void NextQuestion()
+	{
+		if (OptionSelected)
+		{
+			CurrentQuestionIndex++;
+			ProgressValue = CurrentQuestionIndex;
+			inc = 0;
+			OptionSelected = false;
+			SelectedOption = string.Empty;
+			SelectedOptionIndex = -1;
+
+			if (CurrentQuestionIndex >= ExampleTest.Questions.Count)
+			{
+				NavigationManager.NavigateTo("/score");
+				return;
+			}
+		}
+	}
+
+	private void SkipQuestion()
+	{
+		if (CurrentQuestionIndex < ExampleTest.Questions.Count)
+		{
+			CurrentQuestionIndex++;
+			ProgressValue = CurrentQuestionIndex;
+			inc = 0;
+			OptionSelected = false;
+			SelectedOption = string.Empty;
+			SelectedOptionIndex = -1;
+		}
+	}
+
+	private void PreviousQuestion()
+	{
+		if (CurrentQuestionIndex > 0)
+		{
+			CurrentQuestionIndex--;
+			ProgressValue = CurrentQuestionIndex;
+			inc = 0;
+			OptionSelected = false;
+			SelectedOption = string.Empty;
+			SelectedOptionIndex = -1;
+		}
+	}
+
+	private Dictionary<int, string> SelectedAnswers = new Dictionary<int, string>();
+
+
+
 	Test ExampleTest = new Test
 		{
+			TestId = 1,
+			Title = "Flower Test",
+			TestCategory = "Nature",
 			Questions = new List<Question>
 		{
 			new Question
 			{
-				Title = "What is the capital of France ?",
+				Questionn = "What is the capital of France ?",
 				Options = new List<string> { "Berlin", "London", "Paris", "Madrid" },
 				CorrectOption = "Paris"
+			},
+			new Question
+			{
+				Questionn = "1+1 ?",
+				Options = new List<string> { "3", "1", "2", "4" },
+				CorrectOption = "2"
+			},
+			new Question
+			{
+				Questionn = "6/2 ?",
+				Options = new List<string> { "3", "1", "2", "4" },
+				CorrectOption = "1"
+			},
+			new Question
+			{
+				Questionn = "What is Html1?",
+				Options = new List<string> { "Markup Language", "Programming Language", "UI Framework", "Language to program native Apps" },
+				CorrectOption = "1"
 			}
+			,
+			new Question
+			{
+				Questionn = "What is Html2?",
+				Options = new List<string> { "Markup Language", "Programming Language", "UI Framework", "Language to program native Apps" },
+				CorrectOption = "1"
+			}
+
 		}
 		};
 }
