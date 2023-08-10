@@ -268,8 +268,6 @@
 		}
 	}
 
-	
-
 	private bool IsBoxSelected(int answerIndex)
 	{
 		return selectedAnswerIndexes.Contains(answerIndex);
@@ -277,7 +275,7 @@
 
 	private void UpdateSelectedBox(int answerIndex)
 	{
-		if (IsAnswerSelected(answerIndex))
+		if (selectedAnswerIndexes.Contains(answerIndex))
 		{
 			selectedAnswerIndexes.Remove(answerIndex);
 		}
@@ -286,7 +284,6 @@
 			selectedAnswerIndexes.Add(answerIndex);
 		}
 	}
-
 
 	private int activeButton = 0;
 
@@ -311,7 +308,7 @@
 	private bool AnyInputIsEmpty()
 	{
 		return string.IsNullOrWhiteSpace(inputValue1) ||
-						string.IsNullOrWhiteSpace(inputValue2) ||
+			   string.IsNullOrWhiteSpace(inputValue2) ||
 						string.IsNullOrWhiteSpace(inputValue3) ||
 						string.IsNullOrWhiteSpace(inputValue4);
 	}
@@ -319,7 +316,8 @@
 	private void AddToInputList()
 	{
 		isEditing = false;
-		if (AnyInputIsEmpty() || selectedAnswerIndex == -1)
+
+		if (AnyInputIsEmpty() || selectedAnswerIndexes.Count == 0)
 		{
 			showErrorMessage = true;
 			return;
@@ -328,12 +326,12 @@
 		showErrorMessage = false;
 
 		var newAnswers = new List<Answer>
-		{
-			new Answer { Text = inputValue1, IsCorrect = IsAnswerSelected(0) },
-			new Answer { Text = inputValue2, IsCorrect = IsAnswerSelected(1) },
-			new Answer { Text = inputValue3, IsCorrect = IsAnswerSelected(2) },
-			new Answer { Text = inputValue4, IsCorrect = IsAnswerSelected(3) }
-		};
+	{
+		new Answer { Text = inputValue1, IsCorrect = selectedAnswerIndexes.Contains(0) },
+		new Answer { Text = inputValue2, IsCorrect = selectedAnswerIndexes.Contains(1) },
+		new Answer { Text = inputValue3, IsCorrect = selectedAnswerIndexes.Contains(2) },
+		new Answer { Text = inputValue4, IsCorrect = selectedAnswerIndexes.Contains(3) }
+	};
 
 		var newQuestion = new ExamQuestions
 			{
@@ -343,13 +341,15 @@
 
 		examQuestions.Add(newQuestion);
 
+		// Reset input values and selectedAnswerIndexes
 		Question = "";
 		inputValue1 = "";
 		inputValue2 = "";
 		inputValue3 = "";
 		inputValue4 = "";
-		selectedAnswerIndex = -1;
+		selectedAnswerIndexes.Clear();
 	}
+
 
 	private void EditQuestion(ExamQuestions question)
 	{
