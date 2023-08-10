@@ -1,0 +1,49 @@
+﻿@page "/score"
+
+<div class="container-fluid score-page-fw">
+	<div class="container score-page">
+		<div class="row">
+			<div class="col-md-8 mx-auto">
+				<div class="score-container my-5">
+					<div class="text-center text-container">
+						<h2 class="title">Your Score</h2>
+						<div class="score">60%</div>
+						<div class="requested-score">Requested score: 60%</div>
+						<div class="test-result">
+							@(TestPassed ? "Test Passed" : "Test Failed")
+						</div>
+						<div class="time">Time: 28:12</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 btn-container my-5">
+				<button>VIEW ANSWERS</button>
+				<button>EXIT</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid progress-container px-0 py-4">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="d-flex justify-content-sm-around justify-content-between">
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: @ProgressPercentage%" aria-valuenow="@ProgressValue" aria-valuemin="0" aria-valuemax="100">
+						</div>
+						<div class="progress-value">@($"{ProgressValue}/{TotalValue}")</div>
+					</div>
+					<button>Continue</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+@code {
+	bool TestPassed = true;
+
+	private int ProgressValue = 35;
+	private int TotalValue = 35;
+
+	private double ProgressPercentage => (double)ProgressValue / TotalValue * 100;
+}
