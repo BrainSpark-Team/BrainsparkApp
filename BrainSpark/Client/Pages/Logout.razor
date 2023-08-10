@@ -1,5 +1,6 @@
 @page "/authentication/logout"
 @inject NavigationManager NavManager
+@inject NavigationManager NavManager
 
 <h3>Logging out...</h3>
 
@@ -16,7 +17,11 @@
         var postLogoutRedirectUri = "https://ashy-desert-0eae5c503.3.azurestaticapps.net/";
 
         var logoutUrl = $"https://{tenantName}.b2clogin.com/{tenantName}.onmicrosoft.com/{policyName}/oauth2/v2.0/logout?p={policyName}&post_logout_redirect_uri={Uri.EscapeDataString(postLogoutRedirectUri)}";
+        var logoutUrl = $"https://{tenantName}.b2clogin.com/{tenantName}.onmicrosoft.com/{policyName}/oauth2/v2.0/logout?p={policyName}&post_logout_redirect_uri={Uri.EscapeDataString(postLogoutRedirectUri)}";
 
+        
+        NavManager.NavigateTo(logoutUrl, forceLoad: true);
+    }
         
         NavManager.NavigateTo(logoutUrl, forceLoad: true);
     }
