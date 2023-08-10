@@ -2,8 +2,8 @@
 {
 	public class Question
 	{
-		public string Title { get; set; } = string.Empty;
-		public List<string>? Options { get; set; }
-		public string CorrectOption { get; set; } = string.Empty;
+		public string Title { set; get; } = string.Empty;
+		public List<string>? Options { set; get; }
+		public string CorrectOption { set; get; } = string.Empty;
 	}
 }
