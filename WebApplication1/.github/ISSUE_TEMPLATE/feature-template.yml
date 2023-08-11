@@ -1,0 +1,47 @@
+name: 🚀 Solicită o funcționalitate
+description: Descrie funcționalitatea pe care o dorești și crezi că ar fi utilă aplicației
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Concentrează-te doar pe ceea ce este această sarcină de lucru și cum se leagă de business și cetățeni. Nu te concentra pe cum ar trebui să fie implementată.
+  - type: textarea
+    id: description
+    attributes:
+      label: Descriere
+      description: Încearcă să răspunzi oricăror întrebări pe care ar putea să le aibă echipa de dezvoltare. Există vreo dependință față de altă sarcină de lucru? Ce cunoștințe ar trebui să aibă cineva înainte de a începe să lucreze la această sarcină?
+      value: "Ca <persona>, as vrea să pot să <acțiunea>."
+    validations:
+      required: true
+  - type: dropdown
+    id: order
+    attributes:
+      label: Ordinea de prioritate
+      description: Are această sarcină de lucru prioritate ridicată sau scăzută? Nu uita sâ menționezi în descriere ce determină ca această sarcină de lucru să aibă prioritatea specificată, iar dezvoltatorii să îi acorde importanța cuvenită. 
+      multiple: false
+      options:
+        - Ridicată
+        - Medie
+        - Scăzută
+  - type: input
+    id: estimate
+    attributes:
+      label: Estimare
+      description: Cât timp crezi că va dura implementarea acestei sarcini de lucru (în zile)? 
+      placeholder: 1z
+      value: 1z
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Criterii de acceptanță
+      description: Spune-ne și ce te așteptai să se întâmple.
+      value: |
+        - [ ] Criteriu 1
+        - [ ] Criteriu 2
+        - [ ] Criteriu 3
+    validations:
+      required: true

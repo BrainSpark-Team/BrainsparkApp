@@ -1,0 +1,39 @@
+name: 🐛 Raportează bug
+description: Anunță că ai găsit un bug
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Mulțumim că ți-ai luat timp să completezi acest raport de bug!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Ce s-a întâmplat?
+      description: Spune-ne și ce te așteptai să se întâmple.
+      placeholder: Spune-ne ceea ce vezi!
+      value: "Un bug s-a întâmplat!"
+    validations:
+      required: true      
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: Pe ce browsere ai depistat bug-ul?
+      multiple: true
+      options:
+        - Chrome
+        - Microsoft Edge
+        - Firefox
+        - Safari
+        - Opera
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Output-ul logurilor
+      description: Te rugăm să copiezi și lipești aici orice output de log relevant. Vom converti automat log-ul în cod, deci nu e necesar să adaugi backtick-uri.
+      render: shell
