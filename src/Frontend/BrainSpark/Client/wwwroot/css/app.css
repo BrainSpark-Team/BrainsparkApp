@@ -112,3 +112,9 @@ a, .btn-link {
 main{
     min-height: 60vh;
 }
+
+.exam-btn {
+    text-decoration: none;
+    color: #0E2954;
+}
+

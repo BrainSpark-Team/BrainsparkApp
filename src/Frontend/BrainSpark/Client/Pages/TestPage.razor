@@ -25,9 +25,9 @@
 						{
 							@foreach (var (ans, index) in question.Options.Select((option, index) => (option, index)))
 							{
-								<div class="test-question @(index == SelectedOptionIndex ? "selected-option" : "") @(index == SelectedOptionIndex ? "selected-answer" : "")" @onclick="() => SelectOption(ans, index)">
+								<div class="test-question @(index == SelectedOptionIndex ? "selected-option" : "") @(SelectedOptionIndices.ContainsKey(CurrentQuestionIndex) && SelectedOptionIndices[CurrentQuestionIndex].Contains(index) && !OptionSelected ? "previous-answer" : "")" @onclick="() => SelectOption(ans, index)">
 									<span class="abcd-text">@abcd[index]</span>
-									@ans
+									<span class="test-text">@ans</span>
 								</div>
 							}
 						}
@@ -39,7 +39,9 @@
 				}
 				else
 				{
-					<div>No more questions or test not found.</div>
+					<div class="mt-5 text-center">You have left question without answer.</div>
+					<div class="text-center">Are you sure you want to finish test ?</div>
+					<button class="mt-3 mx-auto d-block" @onclick="FinishTest">Finish Test</button>
 				}
 			</div>
 		</div>
@@ -55,8 +57,8 @@
 						</div>
 						<div class="progress-value">@ProgressValue/@TotalValue</div>
 					</div>
-					<button class="btn btn-primary mr-2 @ButtonClass" @onclick="PreviousQuestion" disabled="@(CurrentQuestionIndex == 0 || OptionSelected)"><i class="fa-solid fa-angle-left"></i> Previous</button>
-					<button class="btn btn-secondary mr-2" @onclick="SkipQuestion" disabled="@(OptionSelected)">
+					<button class="btn btn-primary mr-2 @ButtonClass2" @onclick="PreviousQuestion" disabled="@(CurrentQuestionIndex == 0 || OptionSelected)"><i class="fa-solid fa-angle-left"></i> Previous</button>
+					<button class="btn btn-primary mr-2" @onclick="SkipQuestion" disabled="@(OptionSelected)">
 						Skip <i class="fa-solid fa-angles-right"></i>
 					</button>
 
@@ -90,6 +92,9 @@
 	private int SelectedOptionIndex = -1;
 
 	string ButtonClass => OptionSelected ? "selected-button" : "";
+
+	string ButtonClass2 => CurrentQuestionIndex > 0 ? "selected-button-prev" : "";
+
 
 
 
@@ -125,10 +130,31 @@
 
 			if (CurrentQuestionIndex >= ExampleTest.Questions.Count)
 			{
-				NavigationManager.NavigateTo("/score");
+				// Check if all questions have been answered before navigating
+				bool allQuestionsAnswered = SelectedOptionIndices.Keys.Count == ExampleTest.Questions.Count;
+				if (allQuestionsAnswered)
+				{
+					NavigationManager.NavigateTo("/score");
+				}
+				else
+				{
+					// Handle the case where not all questions are answered
+					// For example, you could show a message to the user
+				}
 				return;
 			}
+
+			// Reset the SelectedOptionIndices for the current question index after continuing
+			if (SelectedOptionIndices.ContainsKey(CurrentQuestionIndex))
+			{
+				SelectedOptionIndices.Remove(CurrentQuestionIndex);
+			}
 		}
+	}
+
+	private async Task FinishTest()
+	{
+		NavigationManager.NavigateTo("/score");
 	}
 
 	private void SkipQuestion()
@@ -171,7 +197,7 @@
 			new Question
 			{
 				Questionn = "What is the capital of France ?",
-				Options = new List<string> { "Berlin", "London", "Paris", "Madrid" },
+				Options = new List<string> { "Berlina", "London", "Paris", "Madrid" },
 				CorrectOption = "Paris"
 			},
 			new Question
@@ -186,20 +212,6 @@
 				Options = new List<string> { "3", "1", "2", "4" },
 				CorrectOption = "1"
 			},
-			new Question
-			{
-				Questionn = "What is Html1?",
-				Options = new List<string> { "Markup Language", "Programming Language", "UI Framework", "Language to program native Apps" },
-				CorrectOption = "1"
-			}
-			,
-			new Question
-			{
-				Questionn = "What is Html2?",
-				Options = new List<string> { "Markup Language", "Programming Language", "UI Framework", "Language to program native Apps" },
-				CorrectOption = "1"
-			}
-
 		}
 		};
 }

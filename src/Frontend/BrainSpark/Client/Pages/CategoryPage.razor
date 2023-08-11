@@ -1,4 +1,5 @@
 ﻿@page "/category/{CategoryType}"
+@inject HttpClient Http
 
 <div class="container">
 	<div class="row">
@@ -125,4 +126,5 @@
 	{
 		return Categories.Where(e => e.CategoryType == categoryType);
 	}
+
 }
