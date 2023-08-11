@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shared\BrainSpark.Shared.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Components\ExamPage\" />
   </ItemGroup>
 

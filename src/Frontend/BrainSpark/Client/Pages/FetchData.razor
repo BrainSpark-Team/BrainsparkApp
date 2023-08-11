@@ -1,5 +1,5 @@
-﻿@page "/fetchdata"
-@using BrainSpark.Shared
+﻿@*
+@page "/fetchdata"
 @inject HttpClient Http
 
 <PageTitle>Weather forecast</PageTitle>
@@ -45,3 +45,4 @@ else
         forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast");
     }
 }
+*@
