@@ -1,5 +1,7 @@
 ﻿@page "/admin/newexam"
 
+@inject ExamPageService ExamService
+
 <div class="container">
 	<div class="row">
 		<div class="col-12 d-flex justify-content-between p-0">
@@ -241,7 +243,7 @@
 				</div>
 			}
 
-			@foreach (var question in GetQuestionsForActiveButton())
+			@foreach (var question in ExamService.ExamQuestions)
 			{
 				count = 0;
 				<div class="list-items">
@@ -330,10 +332,10 @@
 	private string inputValue3 = "";
 	private string inputValue4 = "";
 
-	private List<ExamQuestions> singleChoiceQuestions = new List<ExamQuestions>();
-	private List<ExamQuestions> multipleChoiceQuestions = new List<ExamQuestions>();
-	private List<ExamQuestions> textQuestions = new List<ExamQuestions>();
-	private List<ExamQuestions> examQuestions = new List<ExamQuestions>();
+	private List<ExamQuestion> singleChoiceQuestions = new List<ExamQuestion>();
+	private List<ExamQuestion> multipleChoiceQuestions = new List<ExamQuestion>();
+	private List<ExamQuestion> textQuestions = new List<ExamQuestion>();
+	private List<ExamQuestion> examQuestions = new List<ExamQuestion>();
 
 	private bool AnyInputIsEmpty()
 	{
@@ -370,11 +372,12 @@
 			newAnswers.Add(new Answer { Text = inputValue3, IsCorrect = IsSingleChoiceSelected(2) });
 			newAnswers.Add(new Answer { Text = inputValue4, IsCorrect = IsSingleChoiceSelected(3) });
 
-			singleChoiceQuestions.Add(new ExamQuestions
+			singleChoiceQuestions.Add(new ExamQuestion
 				{
 					Text = Question,
 					Answers = newAnswers
 				});
+			
 		}
 		else if (activeButton == 2) // Multiple Choice
 		{
@@ -383,7 +386,7 @@
 			newAnswers.Add(new Answer { Text = inputValue3, IsCorrect = selectedAnswerIndexes.Contains(2) });
 			newAnswers.Add(new Answer { Text = inputValue4, IsCorrect = selectedAnswerIndexes.Contains(3) });
 
-			multipleChoiceQuestions.Add(new ExamQuestions
+			multipleChoiceQuestions.Add(new ExamQuestion
 				{
 					Text = Question,
 					Answers = newAnswers
@@ -393,12 +396,20 @@
 		{
 			newAnswers.Add(new Answer { Text = inputValue1 });
 
-			textQuestions.Add(new ExamQuestions
+			textQuestions.Add(new ExamQuestion
 				{
 					Text = Question,
 					Answers = newAnswers
 				});
 		}
+
+		var newQuestion = new ExamQuestion
+			{
+				Text = Question,
+				Answers = newAnswers
+			};
+
+		ExamService.AddQuestion(newQuestion);
 
 		Question = "";
 		inputValue1 = "";
@@ -409,7 +420,7 @@
 		selectedAnswerIndexes.Clear();
 	}
 
-	private List<ExamQuestions> GetQuestionsForActiveButton()
+	private List<ExamQuestion> GetQuestionsForActiveButton()
 	{
 		if (activeButton == 1)
 		{
@@ -423,10 +434,10 @@
 		{
 			return textQuestions;
 		}
-		return new List<ExamQuestions>();
+		return new List<ExamQuestion>();
 	}
 
-	private void EditQuestion(ExamQuestions question)
+	private void EditQuestion(ExamQuestion question)
 	{
 		isEditing = true;
 
@@ -476,7 +487,7 @@
 	}
 
 
-	private void MoveQuestionUp(ExamQuestions question)
+	private void MoveQuestionUp(ExamQuestion question)
 	{
 		if (activeButton == 1) // Single Choice
 		{
@@ -492,7 +503,7 @@
 		}
 	}
 
-	private void MoveQuestionDown(ExamQuestions question)
+	private void MoveQuestionDown(ExamQuestion question)
 	{
 		if (activeButton == 1) // Single Choice
 		{
@@ -508,7 +519,7 @@
 		}
 	}
 
-	private void MoveQuestionUpForList(List<ExamQuestions> questionList, ExamQuestions question)
+	private void MoveQuestionUpForList(List<ExamQuestion> questionList, ExamQuestion question)
 	{
 		int currentIndex = questionList.IndexOf(question);
 		if (currentIndex > 0)
@@ -518,7 +529,7 @@
 		}
 	}
 
-	private void MoveQuestionDownForList(List<ExamQuestions> questionList, ExamQuestions question)
+	private void MoveQuestionDownForList(List<ExamQuestion> questionList, ExamQuestion question)
 	{
 		int currentIndex = questionList.IndexOf(question);
 		if (currentIndex < questionList.Count - 1)
@@ -528,7 +539,7 @@
 		}
 	}
 
-	private void DeleteQuestion(ExamQuestions question)
+	private void DeleteQuestion(ExamQuestion question)
 	{
 		if (activeButton == 1) // Single Choice
 		{
