@@ -241,7 +241,7 @@
 				</div>
 			}
 
-			@foreach (var question in examQuestions)
+			@foreach (var question in GetQuestionsForActiveButton())
 			{
 				count = 0;
 				<div class="list-items">
@@ -330,6 +330,9 @@
 	private string inputValue3 = "";
 	private string inputValue4 = "";
 
+	private List<ExamQuestions> singleChoiceQuestions = new List<ExamQuestions>();
+	private List<ExamQuestions> multipleChoiceQuestions = new List<ExamQuestions>();
+	private List<ExamQuestions> textQuestions = new List<ExamQuestions>();
 	private List<ExamQuestions> examQuestions = new List<ExamQuestions>();
 
 	private bool AnyInputIsEmpty()
@@ -351,7 +354,7 @@
 	{
 		isEditing = false;
 
-		if (AnyInputIsEmpty() || (activeButton == 1 && selectedAnswerIndex == -1) || (activeButton == 2 && selectedAnswerIndexes.Count == 0))
+		if (AnyInputIsEmpty() || (activeButton == 1 && selectedAnswerIndex == -1) || (activeButton == 2 && selectedAnswerIndexes.Count == 0) || (activeButton == 3 && string.IsNullOrWhiteSpace(inputValue1)))
 		{
 			showErrorMessage = true;
 			return;
@@ -366,6 +369,12 @@
 			newAnswers.Add(new Answer { Text = inputValue2, IsCorrect = IsSingleChoiceSelected(1) });
 			newAnswers.Add(new Answer { Text = inputValue3, IsCorrect = IsSingleChoiceSelected(2) });
 			newAnswers.Add(new Answer { Text = inputValue4, IsCorrect = IsSingleChoiceSelected(3) });
+
+			singleChoiceQuestions.Add(new ExamQuestions
+				{
+					Text = Question,
+					Answers = newAnswers
+				});
 		}
 		else if (activeButton == 2) // Multiple Choice
 		{
@@ -373,19 +382,23 @@
 			newAnswers.Add(new Answer { Text = inputValue2, IsCorrect = selectedAnswerIndexes.Contains(1) });
 			newAnswers.Add(new Answer { Text = inputValue3, IsCorrect = selectedAnswerIndexes.Contains(2) });
 			newAnswers.Add(new Answer { Text = inputValue4, IsCorrect = selectedAnswerIndexes.Contains(3) });
+
+			multipleChoiceQuestions.Add(new ExamQuestions
+				{
+					Text = Question,
+					Answers = newAnswers
+				});
 		}
 		else if (activeButton == 3) // Text Choice
 		{
 			newAnswers.Add(new Answer { Text = inputValue1 });
+
+			textQuestions.Add(new ExamQuestions
+				{
+					Text = Question,
+					Answers = newAnswers
+				});
 		}
-
-		var newQuestion = new ExamQuestions
-			{
-				Text = Question,
-				Answers = newAnswers
-			};
-
-		examQuestions.Add(newQuestion);
 
 		Question = "";
 		inputValue1 = "";
@@ -396,50 +409,139 @@
 		selectedAnswerIndexes.Clear();
 	}
 
-
+	private List<ExamQuestions> GetQuestionsForActiveButton()
+	{
+		if (activeButton == 1)
+		{
+			return singleChoiceQuestions;
+		}
+		else if (activeButton == 2)
+		{
+			return multipleChoiceQuestions;
+		}
+		else if (activeButton == 3)
+		{
+			return textQuestions;
+		}
+		return new List<ExamQuestions>();
+	}
 
 	private void EditQuestion(ExamQuestions question)
 	{
 		isEditing = true;
-		if(activeButton == 3)
+
+		if (activeButton == 3) // Text Choice
 		{
 			Question = question.Text;
 			inputValue1 = question.Answers[0].Text;
-		} else
+			selectedAnswerIndex = -1;
+		}
+		else // Single Choice or Multiple Choice
 		{
 			Question = question.Text;
 			inputValue1 = question.Answers[0].Text;
 			inputValue2 = question.Answers[1].Text;
 			inputValue3 = question.Answers[2].Text;
 			inputValue4 = question.Answers[3].Text;
-		}
-		selectedAnswerIndex = question.Answers.FindIndex(answer => answer.IsCorrect);
 
-		examQuestions.Remove(question);
+			if (activeButton == 1) // Single Choice
+			{
+				selectedAnswerIndex = question.Answers.FindIndex(answer => answer.IsCorrect);
+			}
+			else if (activeButton == 2) // Multiple Choice
+			{
+				selectedAnswerIndexes.Clear();
+				for (int i = 0; i < question.Answers.Count; i++)
+				{
+					if (question.Answers[i].IsCorrect)
+					{
+						selectedAnswerIndexes.Add(i);
+					}
+				}
+			}
+		}
+
+		if (activeButton == 1) // Single Choice
+		{
+			singleChoiceQuestions.Remove(question);
+		}
+		else if (activeButton == 2) // Multiple Choice
+		{
+			multipleChoiceQuestions.Remove(question);
+		}
+		else if (activeButton == 3) // Text Choice
+		{
+			textQuestions.Remove(question);
+		}
 	}
+
 
 	private void MoveQuestionUp(ExamQuestions question)
 	{
-		int currentIndex = examQuestions.IndexOf(question);
-		if (currentIndex > 0)
+		if (activeButton == 1) // Single Choice
 		{
-			examQuestions.RemoveAt(currentIndex);
-			examQuestions.Insert(currentIndex - 1, question);
+			MoveQuestionUpForList(singleChoiceQuestions, question);
+		}
+		else if (activeButton == 2) // Multiple Choice
+		{
+			MoveQuestionUpForList(multipleChoiceQuestions, question);
+		}
+		else if (activeButton == 3) // Text Choice
+		{
+			MoveQuestionUpForList(textQuestions, question);
 		}
 	}
 
 	private void MoveQuestionDown(ExamQuestions question)
 	{
-		int currentIndex = examQuestions.IndexOf(question);
-		if (currentIndex < examQuestions.Count - 1)
+		if (activeButton == 1) // Single Choice
 		{
-			examQuestions.RemoveAt(currentIndex);
-			examQuestions.Insert(currentIndex + 1, question);
+			MoveQuestionDownForList(singleChoiceQuestions, question);
+		}
+		else if (activeButton == 2) // Multiple Choice
+		{
+			MoveQuestionDownForList(multipleChoiceQuestions, question);
+		}
+		else if (activeButton == 3) // Text Choice
+		{
+			MoveQuestionDownForList(textQuestions, question);
+		}
+	}
+
+	private void MoveQuestionUpForList(List<ExamQuestions> questionList, ExamQuestions question)
+	{
+		int currentIndex = questionList.IndexOf(question);
+		if (currentIndex > 0)
+		{
+			questionList.RemoveAt(currentIndex);
+			questionList.Insert(currentIndex - 1, question);
+		}
+	}
+
+	private void MoveQuestionDownForList(List<ExamQuestions> questionList, ExamQuestions question)
+	{
+		int currentIndex = questionList.IndexOf(question);
+		if (currentIndex < questionList.Count - 1)
+		{
+			questionList.RemoveAt(currentIndex);
+			questionList.Insert(currentIndex + 1, question);
 		}
 	}
 
 	private void DeleteQuestion(ExamQuestions question)
 	{
-		examQuestions.Remove(question);
+		if (activeButton == 1) // Single Choice
+		{
+			singleChoiceQuestions.Remove(question);
+		}
+		else if (activeButton == 2) // Multiple Choice
+		{
+			multipleChoiceQuestions.Remove(question);
+		}
+		else if (activeButton == 3) // Text Choice
+		{
+			textQuestions.Remove(question);
+		}
 	}
+
 }
