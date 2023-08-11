@@ -1,0 +1,47 @@
+﻿@page "/admin"
+
+<div class="container acc-cont">
+	<div class="row mt-4">
+		<div class="col-3">
+			<div>
+				<i class="fa-solid fa-house"></i> My Profile
+			</div>
+			<div class="accordion" id="accordionPanelsStayOpenExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+							<i class="fa-regular fa-pen-to-square"></i> Exams
+						</button>
+					</h2>
+					<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+						<div class="accordion-body">
+							<div class="acordion-links">
+								<span class="f-span"></span>
+								<span>Created</span>
+							</div>
+							<div class="acordion-links">
+								<span class="f-span"></span>
+								<span>Assigned</span>
+							</div>
+							<div class="acordion-links">
+								<span class="f-span"></span>
+								<span><NavLink class="exam-btn" href="admin/newexam">New exam</NavLink></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<i class="fa-solid fa-gear"></i> Settings
+			</div>
+			<div class="mt-5 pt-5">
+				<i class="fa-solid fa-arrow-right-from-bracket"></i> Log out
+			</div>
+		</div>
+	</div>
+</div>
+
+
+@code {
+
+}
