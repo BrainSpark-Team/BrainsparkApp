@@ -1,52 +1,29 @@
-﻿@page "/register"
+@page "/register"
 
-<div class="container">
-	<div class="row">
-		<div class="col-12 col-md-8 col-lg-6 mx-auto my-5 login-container">
-			<h2 class="text-center login-text">Register</h2>
-			<form>
-				<div class="mb-3 username-input">
-					<label for="username" class="form-label">Username</label>
-					<input type="text" class="form-control" id="username" placeholder="username">
-				</div>
-				<div class="mb-3 email-input">
-					<label for="email" class="form-label">Email address</label>
-					<input type="email" class="form-control" id="email" placeholder="email">
-				</div>
-				<div class="mb-3 password-input position-relative">
-					<label for="password" class="form-label">Password</label>
-					<input type="@((isPasswordVisible) ? "text" : "password")" class="form-control" id="password" placeholder="password">
-					@if (isPasswordVisible)
-					{
-						<img @onclick="TogglePasswordVisibility" class="eye-icon" src="/Images/eye.svg" alt="eyelash icon" />
-					}
-					else
-					{
-						<img @onclick="TogglePasswordVisibility" class="eye-icon" src="/Images/eyeslash.svg" alt="eyelash icon" />
-					}
-				</div>
-				<div class="checkbox-container">
-					<div class="mb-3 form-check">
-						<input type="checkbox" class="form-check-input" id="keepLogin">
-						<label class="form-check-label" for="keepLogin">I’ve read and agree with <NavLink class="terms-link" href="/termsofservice">TERMS OF SERVICE</NavLink> and our <NavLink class="policy-link" href="/privacypolicy">PRIVACY POLICY</NavLink></label>
-					</div>
-				</div>
-				<button class="login-btn mx-auto d-block my-4" type="submit">Register</button>
-				<div class="mt-4">
-					<p class="text-center">Already have an account ? <NavLink class="reg-now-btn" href="/login">SIGN IN</NavLink></p>
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
+ 
+
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Microsoft.AspNetCore.Components.Authorization
+
+ 
+
+<RegisterView>
+<NotRegister>
+<button @onclick="BeginRegister">Register with Azure AD B2C</button>
+</NotRegister>
+</RegisterView>
+
+ 
 
 @code {
-	private string inputValue = string.Empty;
+    private void BeginRegister()
+    {
+        NavigationManager.NavigateTo("https://brainsparkdemo.b2clogin.com/brainsparkdemo.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_signup&client_id=7962b62a-81be-4516-869b-d870c48ce9d2&nonce=defaultNonce&redirect_uri=https%3A%2F%2Fashy-desert-0eae5c503.3.azurestaticapps.net%2Fauthentication%2Flogin-callback&scope=openid&response_type=code&prompt=login&code_challenge_method=S256&code_challenge=yYLEvHZMt_OsGuk8Qf396sKrX-rEzfC9Bn-lCydWQTE");
+    }
 
-	private bool isPasswordVisible = false;
+ 
 
-	private void TogglePasswordVisibility()
-	{
-		isPasswordVisible = !isPasswordVisible;
-	}
+    [Inject] public NavigationManager NavigationManager { get; set; }
+    [Inject] public AuthenticationStateProvider RegistrationStateProvider { get; set; }
+    [Inject] public RemoteAuthenticationService<RemoteAuthenticationState, RemoteUserAccount, OidcProviderOptions> AuthenticationService { get; set; }
 }
