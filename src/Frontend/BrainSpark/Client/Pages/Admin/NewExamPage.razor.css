@@ -5,6 +5,21 @@
     padding: .4rem 1rem;
     border-radius: 6px;
     font-weight: 600;
+    display: block;
+    margin: 0 auto;
+}
+
+.exam-title {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    font-size: 42px;
+    margin-bottom: 2rem;
+    text-align: center;
+    background-color: #F9F6FF;
 }
 
 .add-new-btn {
@@ -87,13 +102,13 @@
     margin-left: 1rem;
 }
 
-input[type=text] {
+.input-boxes input[type=text] {
     border: none;
     border-bottom: 1px solid #747475;
     padding: 2px 3px;
 }
 
-    input[type=text]:focus {
+.in-grp input[type=text]:focus {
         border-bottom: 1px solid #FF7A00;
         outline: none;
     }

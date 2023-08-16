@@ -8,18 +8,9 @@
 			<NavLink class="my-auto" href="/">
 				Back <img src="/Images/arrow-left.svg" />
 			</NavLink>
-			<button class="create-btn">Create</button>
 		</div>
 		<div class="col-12 exam-container px-md-4 py-md-5 mt-3">
-			<div class="form-check">
-			</div>
-			<div class="form-check">
-			</div>
-			<div class="form-check">
-			</div>
-			<div class="form-check">
-			</div>
-			<h1 contenteditable="true" class="text-center mb-4" @bind="ExamTitle">Untitled Exam</h1>
+			<input class="exam-title" id="examTitle" type="text" autocomplete="off" maxlength="20" @bind="ExamTitle" placeholder="Enter the exam title" />
 			<div class="col-12 add-new-container p-0 p-md-3 d-flex">
 				<div class="add-btn-container">
 					<button class="@(IsActiveButton(1) ? "active-button" : "") ms-0 ms-md-4" @onclick="() => ToggleActive(1)">Single Choice</button>
@@ -243,7 +234,7 @@
 				</div>
 			}
 
-			@foreach (var question in ExamService.ExamQuestions)
+			@foreach (var question in GetQuestionsForActiveButton())
 			{
 				count = 0;
 				<div class="list-items">
@@ -267,7 +258,32 @@
 					</ul>
 				</div>
 			}
+
+			@if (createdExam != null)
+			{
+				<div class="exam-details">
+					<h2>@createdExam.Title</h2>
+					@foreach (var question in createdExam.ExamQuestions)
+					{
+						<div class="question">
+							<h3>@question.Text</h3>
+							<ul>
+								@foreach (var answer in question.Answers)
+								{
+									<li>@answer.Text @if (answer.IsCorrect)
+										{
+											<i class='check-mark fa-solid fa-check fa-l' style='color: #156523;'></i>
+											;
+										}</li>
+								}
+							</ul>
+						</div>
+					}
+				</div>
+			}
+			<button class="create-btn" @onclick="CreateExam">Create exam</button>
 		</div>
+		
 	</div>
 </div>
 
@@ -276,6 +292,8 @@
 	private bool isEditing = false;
 	private bool showErrorMessage = false;
 	private int selectedAnswerIndex = -1; 
+	private Exams createdExam;
+	private string ExamTitle;
 	private HashSet<int> selectedAnswerIndexes = new HashSet<int>();
 
 
@@ -325,7 +343,6 @@
 	{
 		activeButton = IsActiveButton(buttonNumber) ? 0 : buttonNumber;
 	}
-	private string ExamTitle = "";
 	private string Question = "";
 	private string inputValue1 = "";
 	private string inputValue2 = "";
@@ -553,6 +570,20 @@
 		{
 			textQuestions.Remove(question);
 		}
+	}
+
+	private void CreateExam()
+	{
+		Exams exam = new Exams
+			{
+				Title = ExamTitle
+			};
+
+		exam.ExamQuestions.AddRange(singleChoiceQuestions);
+		exam.ExamQuestions.AddRange(multipleChoiceQuestions);
+		exam.ExamQuestions.AddRange(textQuestions);	
+
+		createdExam = exam;
 	}
 
 }
