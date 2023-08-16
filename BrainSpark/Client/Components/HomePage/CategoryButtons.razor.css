@@ -1,0 +1,31 @@
+﻿.category-btn {
+    color: #0E2954;
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: 0.8rem;
+    padding: 0.4rem 2rem;
+    font-size: 1.1rem;
+    border-style: solid;
+    margin-bottom: 1rem;
+}
+
+    .category-btn.nature {
+        border-color: #49A010;
+    }
+
+    .category-btn.biology {
+        border-color: #FF0000;
+    }
+
+    .category-btn.technology {
+        border-color: #0079FF;
+    }
+
+    .category-btn.sport {
+        border-color: #3EC5FF;
+    }
+
+    .category-btn img {
+        width: 1.8rem;
+        height: 1.8rem;
+    }

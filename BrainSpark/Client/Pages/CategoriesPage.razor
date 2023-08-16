@@ -1,0 +1,94 @@
+﻿@page "/categories"
+@inject HttpClient Http
+
+<TopSection />
+
+<div class="container mx-auto mt-5">
+	<div class="categories-title">Categories</div>
+</div>
+
+
+<div class="container">
+	<div class="row">
+		@if (Categories != null || Categories.Count > 0)
+		{
+			@foreach (var exam in Categories)
+			{
+				<div class="col-12 col-md-6 col-lg-4">
+                    <CategoriesCard CategoryType="@exam.CategoryType" ImgUrl="@exam.ImgUrl" ImgAlt="@exam.ImgAlt" Title="@exam.Title" Difficulty="@exam.Difficulty" Questions="@exam.Questions" />
+				</div>
+			}
+		}
+		else
+		{
+			<div class="mx-auto my-auto">Loading...</div>
+		}
+	</div>
+</div>
+@code {
+	private static List<ExamCategory> Categories = new List<ExamCategory>
+	{
+       new  ExamCategory
+        {
+            TestId = 0,
+            CategoryType= "Nature",
+            ImgUrl = "/Images/img1.jpg",
+            ImgAlt = "Nature picture",
+            TimeLimit = "No time limit",
+            Title = "Nature Exams",
+            Questions = 20,
+            Difficulty = "Easy"
+        },
+        new  ExamCategory
+        {
+            TestId = 1,
+            CategoryType= "Biology",
+            ImgUrl = "/Images/BiologyPic.png",
+            TimeLimit = "No time limit",
+            Title = "Biology Exams",
+            Questions = 15,
+            Difficulty = "Easy"
+        },
+        new  ExamCategory
+        {
+            TestId = 2,
+            CategoryType= "Anatomy",
+            ImgUrl = "/Images/AnatomyPic.png",
+            TimeLimit = "No time limit",
+            Title = "Anatomy Exams",
+            Questions = 12,
+            Difficulty = "Easy"
+        },
+        new  ExamCategory
+        {
+            TestId = 3,
+            CategoryType= "Technology",
+            ImgUrl = "/Images/TechnologyPic.png",
+            TimeLimit = "No time limit",
+            Title = "Technology Exam",
+            Questions = 12,
+            Difficulty = "Easy"
+        },
+        new  ExamCategory
+        {
+            TestId = 4,
+            CategoryType= "Geography",
+            ImgUrl = "/Images/GeographyPic.png",
+            TimeLimit = "No time limit",
+            Title = "Geography Exam",
+            Questions = 12,
+            Difficulty = "Easy"
+        }
+	};
+
+
+
+	/*protected override async Task OnInitializedAsync()
+	{
+		var result = await Http.GetFromJsonAsync<List<ExamCategory>>("api/exam");
+		if (result != null)
+		{
+			Categories = result;
+		}
+	}*/
+}
