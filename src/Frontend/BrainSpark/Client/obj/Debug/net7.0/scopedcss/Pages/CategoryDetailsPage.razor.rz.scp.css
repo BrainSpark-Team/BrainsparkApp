@@ -1,0 +1,22 @@
+.top-bg[b-qrjx11mqws] {
+    background: url("/Images/colored-shapes.svg");
+    width: 100%;
+    height: 24rem;
+    object-fit: cover;
+}
+
+.header-container[b-qrjx11mqws] {
+    width: fit-content;
+    margin: auto;
+    padding: 0 4rem;
+    background-color: rgb(28 72 123 / 60%);
+    border-radius: 6px;
+    height: 20rem;
+}
+
+.header-container .header-title[b-qrjx11mqws] {
+    text-align: center;
+    padding-top: 1rem;
+    color: #fff;
+    font-size: 1.6rem;
+}

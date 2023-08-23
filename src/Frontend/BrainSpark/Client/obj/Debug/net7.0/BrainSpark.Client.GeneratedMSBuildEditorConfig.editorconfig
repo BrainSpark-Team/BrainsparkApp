@@ -1,0 +1,177 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = BrainSpark.Client
+build_property.RootNamespace = BrainSpark.Client
+build_property.ProjectDir = c:\Dot Net Projects\Bspark23Aug\Internship202307\src\Frontend\BrainSpark\Client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Dot Net Projects\Bspark23Aug\Internship202307\src\Frontend\BrainSpark\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Components/TestPage/Countdown.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUZXN0UGFnZVxDb3VudGRvd24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/Authentication.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/ForgotPassword (2).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9yZ290UGFzc3dvcmQgKDIpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/LoginCallback.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5DYWxsYmFjay5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/LoginPage (2).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5QYWdlICgyKS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/Register (2).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIgKDIpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Components/CategoriesPage/CategoriesCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yaWVzUGFnZVxDYXRlZ29yaWVzQ2FyZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-vhe2xrrnnu
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Components/CategoriesPage/TopSection.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yaWVzUGFnZVxUb3BTZWN0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-kqlq1xjtar
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Components/CategoryPage/CategoryCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yeVBhZ2VcQ2F0ZWdvcnlDYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-npbjkdxeh2
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Components/CategoryPage/DetailsModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yeVBhZ2VcRGV0YWlsc01vZGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-vi6uiliflx
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Components/CreateExamPage/CreateExamType.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDcmVhdGVFeGFtUGFnZVxDcmVhdGVFeGFtVHlwZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-wysyp5h33q
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Components/CreateExamPage/ExamDescription.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDcmVhdGVFeGFtUGFnZVxFeGFtRGVzY3JpcHRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-cxd0qct4j8
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Components/HomePage/CategoryButtons.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lUGFnZVxDYXRlZ29yeUJ1dHRvbnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ruetudy04s
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Components/HomePage/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lUGFnZVxEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-v2rqcq2gl5
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Components/HomePage/HowItWorks.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lUGFnZVxIb3dJdFdvcmtzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-0fqkmh3gbb
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Components/HomePage/Landing.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lUGFnZVxMYW5kaW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-75otjjk2bx
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/AboutPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXRQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-hbgbt7sd6y
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/Admin/AdminPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRtaW5QYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-5j5g97xh25
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/Admin/CreatedExamsPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3JlYXRlZEV4YW1zUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-10d87q6jty
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/Admin/NewExamPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTmV3RXhhbVBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-brre558g5n
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/CategoriesPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1BhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-7yxl4zvu6s
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/CategoryDetailsPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlEZXRhaWxzUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-qrjx11mqws
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/CategoryPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-0wt2stvld3
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/ForgotPassword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9yZ290UGFzc3dvcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-hnkm7zfjlm
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-jsbi20jd3b
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/LoginPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5QYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-dvwbzlcyjd
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/PrivacyPolicy.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeVBvbGljeS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-x7j25xivso
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-5q1zvofwqy
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/ResultPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzdWx0UGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-2bblmhwf4g
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/TermsOfService.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVybXNPZlNlcnZpY2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-c605ajexk5
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Pages/TestPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdFBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-rwk22es6iy
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Shared/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvb3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-4rki6xd6b2
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-pjr1fl4inl
+
+[c:/Dot Net Projects/Bspark23Aug/Internship202307/src/Frontend/BrainSpark/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-4aveyw5tcs

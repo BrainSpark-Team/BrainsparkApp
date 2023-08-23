@@ -1,0 +1,53 @@
+.login-container[b-5q1zvofwqy] {
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    padding: 2rem;
+    color: #0E2954;
+}
+
+.login-text[b-5q1zvofwqy] {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.email-input[b-5q1zvofwqy] {
+    margin-top: 1.4rem;
+}
+
+.login-btn[b-5q1zvofwqy] {
+    color: #fff;
+    background-color: #FF8551;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 6px;
+    padding: .4rem 2rem;
+}
+
+.checkbox-container[b-5q1zvofwqy] {
+
+}
+
+.forgot-pass[b-5q1zvofwqy] {
+    text-decoration: none !important;
+}
+
+.eye-icon[b-5q1zvofwqy] {
+    position: absolute;
+    right: 10px;
+    top: 34px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .login-container[b-5q1zvofwqy] {
+        padding: 2rem 1rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .checkbox-container[b-5q1zvofwqy] {
+        display: block;
+    }
+}

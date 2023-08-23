@@ -1,0 +1,97 @@
+.score-container[b-2bblmhwf4g] {
+    max-width: 38rem;
+    height: 34rem;
+    margin: auto;
+    background-image: url("Images/result.svg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+
+.score-page-fw[b-2bblmhwf4g] {
+    background-color: #EDE8E3;
+}
+
+.score-page[b-2bblmhwf4g] {
+    background-color: #fff;
+}
+
+.text-container[b-2bblmhwf4g] {
+    color: #fff;
+}
+
+.title[b-2bblmhwf4g] {
+    font-size: 2.8rem;
+}
+
+.score[b-2bblmhwf4g] {
+    font-size: 3.8rem;
+    font-weight: 600;
+}
+
+.requested-score[b-2bblmhwf4g], .test-result[b-2bblmhwf4g], .time[b-2bblmhwf4g] {
+    font-size: 2rem;
+}
+
+.test-result[b-2bblmhwf4g] {
+    font-weight: 600;
+}
+
+.btn-container[b-2bblmhwf4g] {
+    display: flex;
+    justify-content: space-between;
+}
+
+    .btn-container button[b-2bblmhwf4g] {
+        background-color: #FCC822;
+        color: #fff;
+        padding: 1rem 0;
+        min-width: 12rem;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+        .btn-container button:hover[b-2bblmhwf4g] {
+            background-color: #ffd755;
+        }
+
+.progress-container[b-2bblmhwf4g] {
+    background-color: #F4F3F6;
+}
+
+.progress[b-2bblmhwf4g] {
+    height: 2.6rem;
+    background-color: #EDE8E3;
+    min-width: 30%;
+    overflow: unset;
+    position: relative;
+    border: 6px;
+
+}
+.progress-bar[b-2bblmhwf4g] {
+    background-color: #31CD63;
+    border-radius: 6px;
+}
+
+.progress-value[b-2bblmhwf4g] {
+    font-size: 1rem;
+    font-weight: 600;
+    position: absolute;
+    right: -3rem;
+    top: 0.5rem;
+    color: #757575;
+}
+
+.progress-container button[b-2bblmhwf4g] {
+    background-color: #747475;
+    color: #EDE8E2;
+    border: none;
+    padding: .4rem 1rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
