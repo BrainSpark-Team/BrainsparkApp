@@ -39,3 +39,5 @@ jobs:
 
       - name: Run Playwright tests
         run: dotnet test /home/runner/work/BrainsparkApp/BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
+
+
