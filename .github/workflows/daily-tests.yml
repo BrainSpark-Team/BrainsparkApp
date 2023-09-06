@@ -1,25 +1,21 @@
-name: Run NUnit Tests
-
+name: Playwright Tests
 on:
   push:
-    branches:
-      - main
-
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
-  build:
-    runs-on: windows-latest
-
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+    - uses: actions/checkout@v4 
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v1 
       with:
-        dotnet-version: '7.x' # Adjusted to .NET 7
-
-    - name: Restore dependencies
-      run: dotnet restore C:\DotnetProjects\DebuggingTestWorkflow\BrainsparkApp\BrainSpark\Client\BrainSpark.Client.E2ETests\BrainSpark.Client.E2ETests.csproj
-
-    - name: Run tests
-      run: dotnet test C:\DotnetProjects\DebuggingTestWorkflow\BrainsparkApp\BrainSpark\Client\BrainSpark.Client.E2ETests\BrainSpark.Client.E2ETests.csproj --no-restore --verbosity normal
+        dotnet-version: 7.x
+    - run: dotnet build
+    - name: Ensure browsers are installed
+      run: pwsh bin/Debug/net7.0/playwright.ps1 install --with-deps
+    - name: Run your tests
+      run: dotnet test
