@@ -19,6 +19,11 @@ jobs:
         with:
           dotnet-version: 7.0.x
 
+      - name: List directory contents
+        run: |
+          pwd
+          ls -R    
+
       - name: Restore dependencies for the main project
         run: dotnet restore /home/runner/work/BrainsparkApp/BrainsparkApp/BrainSpark/Client/BrainSpark.Client.csproj
 
