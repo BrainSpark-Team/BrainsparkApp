@@ -1,0 +1,75 @@
+.login-page[b-dvwbzlcyjd] {
+    background-color: #F7EFE5;
+    padding: 2rem 0;
+}
+
+.img-vector1[b-dvwbzlcyjd] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20rem;
+}
+
+.img-vector2[b-dvwbzlcyjd] {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 20rem;
+}
+
+.login-container[b-dvwbzlcyjd] {
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    padding: 2rem;
+    color: #0E2954;
+}
+
+.login-text[b-dvwbzlcyjd] {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.email-input[b-dvwbzlcyjd] {
+    margin-top: 1.4rem;
+}
+
+.login-btn[b-dvwbzlcyjd] {
+    color: #fff;
+    background-color: #FF8551;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 6px;
+    padding: .4rem 2rem;
+}
+
+.checkbox-container[b-dvwbzlcyjd] {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forgot-pass[b-dvwbzlcyjd] {
+    text-decoration: none !important;
+}
+
+.eye-icon[b-dvwbzlcyjd] {
+    position: absolute;
+    right: 10px;
+    top: 34px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .login-container[b-dvwbzlcyjd] {
+        padding: 2rem 1rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 450px) {
+    .checkbox-container[b-dvwbzlcyjd] {
+        display: block;
+    }
+}

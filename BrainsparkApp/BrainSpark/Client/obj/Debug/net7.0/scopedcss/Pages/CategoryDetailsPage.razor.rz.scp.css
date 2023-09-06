@@ -1,0 +1,108 @@
+.container[b-qrjx11mqws] {
+    color: #0E2954;
+}
+.top-bg[b-qrjx11mqws] {
+    background: url("/Images/colored-shapes.svg");
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container[b-qrjx11mqws] {
+    margin: auto;
+    padding: 0 1.2rem;
+    background-color: #fff;
+    border-radius: 6px;
+    height: auto;
+    width: 26rem;
+}
+
+    .header-container .header-title[b-qrjx11mqws] {
+        text-align: center;
+        padding: .6rem 0;
+        color: #0E2954;
+        font-size: 1.6rem;
+        margin-bottom: 0.6rem;
+        font-weight: 500;
+    }
+
+.buy-exam-title[b-qrjx11mqws] {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.purchase-options[b-qrjx11mqws] {
+    color: #0E2954;
+    text-decoration: underline;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.purchase-container[b-qrjx11mqws] {
+    margin-top: 2rem;
+}
+
+.purchase-title[b-qrjx11mqws] {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: .6rem;
+}
+
+.purchase-container-basic[b-qrjx11mqws] {
+    background-color: #e3f5f3;
+    border-radius: 6px;
+    margin-top: 1.2rem;
+    padding: 1rem;
+}
+
+.purchase-container-ultimate[b-qrjx11mqws] {
+    background-color: #e5e3f5;
+    border-radius: 6px;
+    margin-top: 1.2rem;
+    padding: 1rem;
+}
+
+    .purchase-container-basic button[b-qrjx11mqws],
+    .purchase-container-ultimate button[b-qrjx11mqws] {
+        width: 80%;
+        border-radius: 6px;
+        display: block;
+        background-color: #fff;
+        color: #FF7A00;
+        margin: 1rem auto 0 auto;
+        border: 1px solid#FF7A00;
+        padding: 0.3rem;
+    }
+
+.check[b-qrjx11mqws] {
+    color: #9ad17f;
+}
+
+.xmark[b-qrjx11mqws] {
+    color: #FF6969;
+}
+
+.price-container[b-qrjx11mqws] {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0 1.4rem 0;
+}
+
+    .price-container .price-text[b-qrjx11mqws],
+    .price-container .price[b-qrjx11mqws] {
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+
+.description-container[b-qrjx11mqws] {
+    margin: 2rem 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+}

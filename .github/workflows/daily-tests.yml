@@ -1,49 +1,25 @@
-name: Playwright .NET Tests
+name: Run NUnit Tests
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
-  test:
-    timeout-minutes: 60
+  build:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 7.0.x
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '7.x' # Adjusted to .NET 7
 
-      - name: List directory contents
-        run: |
-          pwd
-          ls -R    
+    - name: Restore dependencies
+      run: dotnet restore C:\DotnetProjects\DebuggingTestWorkflow\BrainsparkApp\BrainSpark\Client\BrainSpark.Client.E2ETests\BrainSpark.Client.E2ETests.csproj
 
-      - name: Restore dependencies for the main project
-        run: dotnet restore BrainsparkApp\BrainSpark\Client\BrainSpark.Client.csproj
-
-      - name: Restore dependencies for the test project
-        run: dotnet restore BrainsparkApp\BrainSpark\Client\BrainSpark.Client.E2ETests\BrainSpark.Client.E2ETests.csproj
-
-      - name: Install Playwright dependencies
-        run: dotnet add package Microsoft.Playwright.NUnit
-
-      - name: Build the project
-        run: dotnet build BrainsparkApp\BrainSpark\Client\BrainSpark.Client.E2ETests\BrainSpark.Client.E2ETests.csproj --configuration Release
-
-      - name: Install Playwright CLI
-        run: dotnet tool install --global Microsoft.Playwright.CLI
-
-      - name: Add dotnet global tools to PATH
-        run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
-
-      - name: Install Playwright Browsers
-        run: pwsh $(Build.BinariesDirectory)/playwright.ps1 install
-
-      - name: Run Playwright tests
-        run: dotnet test BrainsparkApp\BrainSpark\Client\BrainSpark.Client.E2ETests\BrainSpark.Client.E2ETests.csproj
+    - name: Run tests
+      run: dotnet test C:\DotnetProjects\DebuggingTestWorkflow\BrainsparkApp\BrainSpark\Client\BrainSpark.Client.E2ETests\BrainSpark.Client.E2ETests.csproj --no-restore --verbosity normal

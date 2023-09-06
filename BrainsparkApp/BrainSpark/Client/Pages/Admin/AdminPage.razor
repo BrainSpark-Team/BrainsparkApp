@@ -8,6 +8,7 @@
 			<!-- Inserted User Country or Login Status Here -->
             <div class="user-info">
                 <h4>@displayText</h4>
+				<h5>@displayText2</h5>
             </div>
             <!-- End of Inserted Section -->
 			<div>
@@ -51,6 +52,7 @@
 
 @code {
 private string displayText = "You are not logged in";
+private string displayText2 = "You are not logged in";
 
     protected override async Task OnInitializedAsync()
     {
@@ -76,6 +78,16 @@ private string displayText = "You are not logged in";
             {
                 displayText = "Country information not available";
             }
+
+			var accountTypeClaim = user.Claims.FirstOrDefault(c => c.Type == "AccountType" || c.Type == "accountType" || c.Type == "accounttype" || c.Type == "http://schemas.microsoft.com/claims/accounttype" || c.Type == "extension_AccountType" || c.Type == "extension_accountType" || c.Type == "extension_accounttype");
+			if (accountTypeClaim != null)
+			{
+				displayText2 = $"You are a {accountTypeClaim.Value}";
+			}
+			else
+			{
+				displayText2 = "Account type not available";
+			}
         }
     }
 }

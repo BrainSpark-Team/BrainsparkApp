@@ -1,0 +1,845 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\obj\\Debug\\net7.0\\build-gz\\VaiGoRik.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BrainSpark.Client.styles.css",
+      "PackagePath": "staticwebassets\\BrainSpark.Client.styles.css"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\BrainSparkLogo.png",
+      "PackagePath": "staticwebassets\\BrainSparkLogo.png"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\AnatomyPic.png",
+      "PackagePath": "staticwebassets\\Images\\AnatomyPic.png"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\BiologyPic.png",
+      "PackagePath": "staticwebassets\\Images\\BiologyPic.png"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\FlowerPic.png",
+      "PackagePath": "staticwebassets\\Images\\FlowerPic.png"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\GeographyPic.png",
+      "PackagePath": "staticwebassets\\Images\\GeographyPic.png"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\Group.svg",
+      "PackagePath": "staticwebassets\\Images\\Group.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\MountainPic.png",
+      "PackagePath": "staticwebassets\\Images\\MountainPic.png"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\RiverPic.png",
+      "PackagePath": "staticwebassets\\Images\\RiverPic.png"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\TechnologyPic.png",
+      "PackagePath": "staticwebassets\\Images\\TechnologyPic.png"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\TreePic.png",
+      "PackagePath": "staticwebassets\\Images\\TreePic.png"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\Vector.svg",
+      "PackagePath": "staticwebassets\\Images\\Vector.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\analyze.svg",
+      "PackagePath": "staticwebassets\\Images\\analyze.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\arrow-left.svg",
+      "PackagePath": "staticwebassets\\Images\\arrow-left.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\chart.svg",
+      "PackagePath": "staticwebassets\\Images\\chart.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\clock.svg",
+      "PackagePath": "staticwebassets\\Images\\clock.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\colored-shapes.svg",
+      "PackagePath": "staticwebassets\\Images\\colored-shapes.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\cpucharge.svg",
+      "PackagePath": "staticwebassets\\Images\\cpucharge.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\detailsbg.jpg",
+      "PackagePath": "staticwebassets\\Images\\detailsbg.jpg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\eye.svg",
+      "PackagePath": "staticwebassets\\Images\\eye.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\eyeslash.svg",
+      "PackagePath": "staticwebassets\\Images\\eyeslash.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\heartadd.svg",
+      "PackagePath": "staticwebassets\\Images\\heartadd.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\img1.jpg",
+      "PackagePath": "staticwebassets\\Images\\img1.jpg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\img2.jpg",
+      "PackagePath": "staticwebassets\\Images\\img2.jpg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\leaf.svg",
+      "PackagePath": "staticwebassets\\Images\\leaf.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\medalstar.svg",
+      "PackagePath": "staticwebassets\\Images\\medalstar.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\messagequestion.svg",
+      "PackagePath": "staticwebassets\\Images\\messagequestion.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\pattern.svg",
+      "PackagePath": "staticwebassets\\Images\\pattern.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\plus.svg",
+      "PackagePath": "staticwebassets\\Images\\plus.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\result.svg",
+      "PackagePath": "staticwebassets\\Images\\result.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\tabicon.png",
+      "PackagePath": "staticwebassets\\Images\\tabicon.png"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\twitter.svg",
+      "PackagePath": "staticwebassets\\Images\\twitter.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\vector2.svg",
+      "PackagePath": "staticwebassets\\Images\\vector2.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\Images\\waves.svg",
+      "PackagePath": "staticwebassets\\Images\\waves.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\LearningPic.svg",
+      "PackagePath": "staticwebassets\\LearningPic.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min (2).css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min (2).css"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css (2).map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css (2).map"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic (2).eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic (2).eot"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic (2).otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic (2).otf"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic (2).svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic (2).svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic (2).ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic (2).ttf"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic (2).woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic (2).woff"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\interop.js",
+      "PackagePath": "staticwebassets\\interop.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\lib\\quill\\CHANGELOG.md"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\quill"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\README.md",
+      "PackagePath": "staticwebassets\\lib\\quill\\README.md"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\base.styl",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\base.styl"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\bubble.styl",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\bubble.styl"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\bubble\\toolbar.styl",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\bubble\\toolbar.styl"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\bubble\\tooltip.styl",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\bubble\\tooltip.styl"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\core.styl",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\core.styl"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\favicon.png",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\favicon.png"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\align-center.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\align-center.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\align-justify.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\align-justify.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\align-left.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\align-left.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\align-right.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\align-right.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\attachment.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\attachment.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\audio.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\audio.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\authorship.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\authorship.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\background.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\background.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\blockquote.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\blockquote.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\bold.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\bold.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\clean.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\clean.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\code.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\code.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\color.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\color.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\comment.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\comment.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\direction-ltr.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\direction-ltr.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\direction-rtl.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\direction-rtl.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\dropdown.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\dropdown.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\embed.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\embed.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\emoji.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\emoji.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\float-center.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\float-center.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\float-full.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\float-full.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\float-left.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\float-left.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\float-right.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\float-right.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\font.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\font.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\formula.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\formula.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\hashtag.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\hashtag.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\header-2.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\header-2.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\header-3.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\header-3.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\header-4.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\header-4.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\header-5.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\header-5.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\header-6.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\header-6.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\header.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\header.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\horizontal-rule.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\horizontal-rule.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\image.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\image.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\indent.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\indent.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\italic.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\italic.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\link.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\link.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\list-bullet.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\list-bullet.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\list-check.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\list-check.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\list-ordered.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\list-ordered.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\map.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\map.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\mention.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\mention.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\more.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\more.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\outdent.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\outdent.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\redo.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\redo.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\size-decrease.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\size-decrease.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\size-increase.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\size-increase.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\size.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\size.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\spacing.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\spacing.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\speech.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\speech.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\strike.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\strike.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\subscript.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\subscript.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\superscript.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\superscript.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-border-all.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-border-all.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-border-bottom.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-border-bottom.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-border-left.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-border-left.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-border-none.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-border-none.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-border-outside.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-border-outside.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-border-right.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-border-right.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-border-top.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-border-top.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-delete-cells.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-delete-cells.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-delete-columns.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-delete-columns.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-delete-rows.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-delete-rows.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-insert-cells.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-insert-cells.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-insert-columns.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-insert-columns.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-insert-rows.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-insert-rows.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-merge-cells.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-merge-cells.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table-unmerge-cells.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table-unmerge-cells.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\table.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\table.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\underline.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\underline.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\undo.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\undo.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\icons\\video.svg",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\icons\\video.svg"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\snow.styl",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\snow.styl"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\snow\\toolbar.styl",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\snow\\toolbar.styl"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\assets\\snow\\tooltip.styl",
+      "PackagePath": "staticwebassets\\lib\\quill\\assets\\snow\\tooltip.styl"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\blots\\block.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\blots\\block.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\blots\\break.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\blots\\break.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\blots\\container.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\blots\\container.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\blots\\cursor.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\blots\\cursor.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\blots\\embed.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\blots\\embed.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\blots\\inline.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\blots\\inline.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\blots\\scroll.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\blots\\scroll.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\blots\\text.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\blots\\text.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\core.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\core.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\core\\editor.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\core\\editor.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\core\\emitter.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\core\\emitter.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\core\\logger.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\core\\logger.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\core\\module.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\core\\module.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\core\\polyfill.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\core\\polyfill.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\core\\quill.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\core\\quill.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\core\\selection.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\core\\selection.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\core\\theme.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\core\\theme.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\dist\\quill.bubble.css",
+      "PackagePath": "staticwebassets\\lib\\quill\\dist\\quill.bubble.css"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\dist\\quill.core.css",
+      "PackagePath": "staticwebassets\\lib\\quill\\dist\\quill.core.css"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\dist\\quill.core.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\dist\\quill.core.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\dist\\quill.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\dist\\quill.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\dist\\quill.min.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\dist\\quill.min.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\dist\\quill.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\quill\\dist\\quill.min.js.map"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\dist\\quill.snow.css",
+      "PackagePath": "staticwebassets\\lib\\quill\\dist\\quill.snow.css"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\align.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\align.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\background.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\background.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\blockquote.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\blockquote.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\bold.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\bold.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\code.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\code.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\color.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\color.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\direction.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\direction.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\font.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\font.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\header.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\header.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\image.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\image.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\indent.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\indent.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\italic.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\italic.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\link.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\link.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\list.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\list.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\script.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\script.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\size.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\size.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\strike.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\strike.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\underline.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\underline.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\formats\\video.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\formats\\video.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\modules\\clipboard.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\modules\\clipboard.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\modules\\formula.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\modules\\formula.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\modules\\history.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\modules\\history.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\modules\\keyboard.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\modules\\keyboard.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\modules\\syntax.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\modules\\syntax.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\modules\\toolbar.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\modules\\toolbar.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\package.json",
+      "PackagePath": "staticwebassets\\lib\\quill\\package.json"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\quill.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\quill.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\themes\\base.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\themes\\base.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\themes\\bubble.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\themes\\bubble.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\themes\\snow.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\themes\\snow.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\ui\\color-picker.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\ui\\color-picker.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\ui\\icon-picker.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\ui\\icon-picker.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\ui\\icons.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\ui\\icons.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\ui\\picker.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\ui\\picker.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\lib\\quill\\ui\\tooltip.js",
+      "PackagePath": "staticwebassets\\lib\\quill\\ui\\tooltip.js"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\staticwebapp.config.json",
+      "PackagePath": "staticwebassets\\staticwebapp.config.json"
+    },
+    {
+      "Id": "C:\\DotnetProjects\\DebuggingTestWorkflow\\BrainsparkApp\\BrainSpark\\Client\\wwwroot\\tabicon.png",
+      "PackagePath": "staticwebassets\\tabicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BrainSpark.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.BrainSpark.Client.props",
+      "PackagePath": "build\\BrainSpark.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BrainSpark.Client.props",
+      "PackagePath": "buildMultiTargeting\\BrainSpark.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.BrainSpark.Client.props",
+      "PackagePath": "buildTransitive\\BrainSpark.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
