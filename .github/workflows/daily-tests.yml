@@ -2,27 +2,26 @@ name: Playwright Tests
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
-  e2e-tests:
-    runs-on: windows-latest
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup dotnet
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: '7.0.x'
-      - run: dotnet build
-      - name: Ensure browsers are installed
-        run: pwsh bin/Debug/net7.0/playwright.ps1 install --with-deps
-      - name: Run your tests
-        run: dotnet test
-      - uses: actions/upload-artifact@v2
-        if: always()
-        with:
-          name: playwright-report
-          path: playwright-report/
-          retention-days: 30
+    - uses: actions/checkout@v3
+
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+
+    - run: dotnet build BrainsparkApp/BrainSpark/Client/BrainSpark.Client.csproj --configuration Release
+
+    - name: Ensure browsers are installed
+      run: pwsh BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/bin/Debug/net7.0/playwright.ps1 install --with-deps
+
+    - name: Run your tests
+      run: dotnet test BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
+
