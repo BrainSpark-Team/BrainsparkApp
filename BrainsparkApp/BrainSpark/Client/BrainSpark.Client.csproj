@@ -6,6 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <PlaywrightPlatform>all</PlaywrightPlatform>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="Components\ExamPage\**" />
     <Content Remove="Components\ExamPage\**" />
