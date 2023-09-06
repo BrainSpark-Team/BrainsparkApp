@@ -9,22 +9,32 @@ on:
 jobs:
   test:
     timeout-minutes: 60
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 7.0.x
 
+      - name: List directory contents
+        run: |
+          pwd
+          ls -R    
+
       - name: Restore dependencies for the main project
-        run: dotnet restore BrainsparkApp/BrainSpark/Client/BrainSpark.Client.csproj
+        run: dotnet restore BrainsparkApp\BrainSpark\Client\BrainSpark.Client.csproj
 
       - name: Restore dependencies for the test project
-        run: dotnet restore BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
+        run: dotnet restore BrainsparkApp\BrainSpark\Client\BrainSpark.Client.E2ETests\BrainSpark.Client.E2ETests.csproj
+
+      - name: Install Playwright dependencies
+        run: dotnet add package Microsoft.Playwright.NUnit
+
+      - name: Build the project
+        run: dotnet build BrainsparkApp\BrainSpark\Client\BrainSpark.Client.E2ETests\BrainSpark.Client.E2ETests.csproj --configuration Release
 
       - name: Install Playwright CLI
         run: dotnet tool install --global Microsoft.Playwright.CLI
@@ -33,10 +43,7 @@ jobs:
         run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
 
       - name: Install Playwright Browsers
-        run: dotnet-playwright install
+        run: pwsh $(Build.BinariesDirectory)/playwright.ps1 install
 
-      - name: Build the test project
-        run: dotnet build BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj --configuration Release
-
-      - name: Run specific Playwright tests
-        run: dotnet test BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj --filter FullyQualifiedName~BrainSpark.Client.E2ETests.LoginTests
+      - name: Run Playwright tests
+        run: dotnet test BrainsparkApp\BrainSpark\Client\BrainSpark.Client.E2ETests\BrainSpark.Client.E2ETests.csproj
