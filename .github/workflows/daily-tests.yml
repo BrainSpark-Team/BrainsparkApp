@@ -19,6 +19,9 @@ jobs:
 
     - run: dotnet build BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj --configuration Release
 
+    - name: Grant execute permissions to Playwright script
+      run: chmod +x BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/bin/Debug/net7.0/.playwright/node/linux-x64/playwright.sh    
+
     - name: Ensure browsers are installed
       run: pwsh BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/bin/Debug/net7.0/playwright.ps1 install --with-deps
 
