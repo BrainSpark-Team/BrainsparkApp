@@ -23,7 +23,7 @@ jobs:
         run: dotnet restore /home/runner/work/BrainsparkApp/BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
 
       - name: Restore dependencies for the test project
-        run: dotnet restore /home/runner/work/BrainsparkApp/BrainSparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
+        run: dotnet restore /home/runner/work/BrainsparkApp/BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
 
       - name: Install Playwright CLI
         run: dotnet tool install --global Microsoft.Playwright.CLI
@@ -38,4 +38,4 @@ jobs:
         run: dotnet build /home/runner/work/BrainsparkApp/BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj --configuration Release
 
       - name: Run Playwright tests
-        run: dotnet test /home/runner/work/BrainsparkApp/BrainSparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
+        run: dotnet test /home/runner/work/BrainsparkApp/BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
