@@ -1,0 +1,345 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = BrainSpark.Client
+build_property.RootNamespace = BrainSpark.Client
+build_property.ProjectDir = c:\DotnetProjects\DebuggingTestWorkflow\BrainsparkApp\BrainSpark\Client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\DotnetProjects\DebuggingTestWorkflow\BrainsparkApp\BrainSpark\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/App(1).razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwKDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/CategoriesPage/CategoriesCard(1).razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yaWVzUGFnZVxDYXRlZ29yaWVzQ2FyZCgxKS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/CategoriesPage/TopSection(1).razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yaWVzUGFnZVxUb3BTZWN0aW9uKDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/CategoryPage/CategoryCard(1).razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yeVBhZ2VcQ2F0ZWdvcnlDYXJkKDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/CategoryPage/DetailsModal(1).razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yeVBhZ2VcRGV0YWlsc01vZGFsKDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/CreateExamPage/CreateExamType(1).razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDcmVhdGVFeGFtUGFnZVxDcmVhdGVFeGFtVHlwZSgxKS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/CreateExamPage/ExamDescription(1).razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDcmVhdGVFeGFtUGFnZVxFeGFtRGVzY3JpcHRpb24oMSkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/HomePage/CategoryButtons(1).razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lUGFnZVxDYXRlZ29yeUJ1dHRvbnMoMSkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/HomePage/Details(1).razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lUGFnZVxEZXRhaWxzKDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/HomePage/HowItWorks(1).razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lUGFnZVxIb3dJdFdvcmtzKDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/HomePage/Landing(1).razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lUGFnZVxMYW5kaW5nKDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/TestPage/Countdown(1).razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUZXN0UGFnZVxDb3VudGRvd24oMSkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/TestPage/Countdown.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUZXN0UGFnZVxDb3VudGRvd24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/AboutPage(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXRQYWdlKDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Admin/AdminPage(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRtaW5QYWdlKDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Admin/CreatedExamsPage(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3JlYXRlZEV4YW1zUGFnZSgxKS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Admin/NewExamPage(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTmV3RXhhbVBhZ2UoMSkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Authentication(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb24oMSkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Authentication.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/CategoriesPage(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1BhZ2UoMSkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/CategoryDetailsPage(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlEZXRhaWxzUGFnZSgxKS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/CategoryPage(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlQYWdlKDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Counter(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlcigxKS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/ExamPaymentPackages(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhhbVBheW1lbnRQYWNrYWdlcygxKS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/FetchData(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhKDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/ForgotPassword (2)(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9yZ290UGFzc3dvcmQgKDIpKDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/ForgotPassword (2).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9yZ290UGFzc3dvcmQgKDIpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/ForgotPassword(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9yZ290UGFzc3dvcmQoMSkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Index(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgoMSkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/LoginCallback(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5DYWxsYmFjaygxKS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/LoginCallback.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5DYWxsYmFjay5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/LoginPage (2)(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5QYWdlICgyKSgxKS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/LoginPage (2).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5QYWdlICgyKS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/LoginPage(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5QYWdlKDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Logout(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0KDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/PrivacyPolicy(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeVBvbGljeSgxKS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Register (2)(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIgKDIpKDEpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Register (2).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIgKDIpLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Register(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIoMSkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/ResultPage(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzdWx0UGFnZSgxKS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/TermsOfService(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVybXNPZlNlcnZpY2UoMSkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/TestPage(1).razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdFBhZ2UoMSkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Shared/Footer(1).razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvb3RlcigxKS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Shared/MainLayout(1).razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQoMSkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Shared/NavMenu(1).razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUoMSkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Shared/SurveyPrompt(1).razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdCgxKS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/_Imports(1).razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMoMSkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/CategoriesPage/CategoriesCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yaWVzUGFnZVxDYXRlZ29yaWVzQ2FyZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-vhe2xrrnnu
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/CategoriesPage/TopSection.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yaWVzUGFnZVxUb3BTZWN0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-kqlq1xjtar
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/CategoryPage/CategoryCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yeVBhZ2VcQ2F0ZWdvcnlDYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-npbjkdxeh2
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/CategoryPage/DetailsModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXRlZ29yeVBhZ2VcRGV0YWlsc01vZGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-vi6uiliflx
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/CreateExamPage/CreateExamType.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDcmVhdGVFeGFtUGFnZVxDcmVhdGVFeGFtVHlwZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-wysyp5h33q
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/CreateExamPage/ExamDescription.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDcmVhdGVFeGFtUGFnZVxFeGFtRGVzY3JpcHRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-cxd0qct4j8
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/HomePage/CategoryButtons.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lUGFnZVxDYXRlZ29yeUJ1dHRvbnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ruetudy04s
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/HomePage/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lUGFnZVxEZXRhaWxzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-v2rqcq2gl5
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/HomePage/HowItWorks.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lUGFnZVxIb3dJdFdvcmtzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-0fqkmh3gbb
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Components/HomePage/Landing.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lUGFnZVxMYW5kaW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-75otjjk2bx
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/AboutPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXRQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-hbgbt7sd6y
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Admin/AdminPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWRtaW5QYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-5j5g97xh25
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Admin/CreatedExamsPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ3JlYXRlZEV4YW1zUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-10d87q6jty
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Admin/NewExamPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cTmV3RXhhbVBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-brre558g5n
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/CategoriesPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1BhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-7yxl4zvu6s
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/CategoryDetailsPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlEZXRhaWxzUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-qrjx11mqws
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/CategoryPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-0wt2stvld3
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/ExamPaymentPackages.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhhbVBheW1lbnRQYWNrYWdlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-bmfnwgzi7i
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/ForgotPassword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9yZ290UGFzc3dvcmQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-hnkm7zfjlm
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-jsbi20jd3b
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/LoginPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5QYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-dvwbzlcyjd
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/PrivacyPolicy.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeVBvbGljeS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-x7j25xivso
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-5q1zvofwqy
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/ResultPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzdWx0UGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-2bblmhwf4g
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/TermsOfService.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVybXNPZlNlcnZpY2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-c605ajexk5
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Pages/TestPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdFBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-rwk22es6iy
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Shared/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvb3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-4rki6xd6b2
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-pjr1fl4inl
+
+[c:/DotnetProjects/DebuggingTestWorkflow/BrainsparkApp/BrainSpark/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-4aveyw5tcs

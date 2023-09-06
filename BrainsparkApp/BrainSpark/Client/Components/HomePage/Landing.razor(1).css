@@ -1,0 +1,64 @@
+﻿.landing-container {
+    color: #0E2954;
+}
+
+    .landing-container .text-container {
+        text-align: center;
+    }
+
+        .landing-container .text-container p {
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-top: 28px;
+        }
+
+    .landing-container .landing-text {
+        font-size: 3rem;
+    }
+
+        .landing-container .landing-text span {
+            font-weight: 800;
+        }
+
+.container .landing-svg img {
+    width: 100%;
+}
+
+.teacher-login-btn .teacher,
+.student-signup-btn .student {
+    display: block;
+}
+
+.teacher-login-btn .log-text,
+.student-signup-btn .sign-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.container .student-signup-btn {
+    color: #ffffff;
+    background-color: #8062D6;
+    border-radius: 9px;
+    padding: 0 0px 0 12px;
+    width: 207px;
+    height: 71px;
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border: none;
+    text-align: initial;
+}
+
+.container .teacher-login-btn {
+    color: #8062D6;
+    background-color: #fff;
+    border-radius: 9px;
+    padding: 0 0px 0 12px;
+    width: 207px;
+    height: 71px;
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border: none;
+    text-align: initial;
+}
+
+.waves-bg img {
+    width: 100%;
+}

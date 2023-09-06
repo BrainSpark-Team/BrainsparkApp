@@ -1,0 +1,312 @@
+﻿@using System.ComponentModel.DataAnnotations
+
+@inject HttpClient httpClient
+
+<h1 class="title">Create Your Exam</h1>
+<div class="exam-type">
+    <div class="public-container">
+        <button class="public-button @(IsActiveButton(1) ? "active-button" : "")" @onclick="() => ToggleActive(1)">Public Exam</button>
+        <p>Create a public exam that anyone can take. Perfect for general knowledge or certification exams.</p>
+    </div>
+    <div class="assigned-container">
+        <button class="assigned-button">Assigned Exam</button>
+        <p>Create an exam for a specific group of people. Ideal for schools, universities, and companies.</p>
+    </div>
+</div>
+
+@if (activeButton == 1)
+{
+    <h1 class="select-options">Select Options</h1>
+    <div class="options-container">
+        <div class="select-options-container">
+    
+            <div class="category">
+                <label class="form-label">Select category</label>
+                <BootstrapSelect TItem="Category"
+                Data="@categories"
+                TextField="@((item) => item.Name)"
+                ValueField="@((item) => item.Name)"
+                TType="string"
+                ShowSearch="true"
+                SearchStyle="@SearchStyles.Contains"
+                @bind-Value="SelectedCategoryType" />
+            </div>
+       
+            <div class="difficulty">
+                <label class="form-label">Select difficulty</label>
+                <select class="form-select" aria-label="Default select example" @bind="SelectedDifficulty">
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+            <div class="max-attempts">
+                <div class="mb-3">
+                <label class="form-label">Max attempts</label>
+                <NumberInput TValue="int?" @bind-Value="@amount" EnableMinMax="true" Min="1" Max="500" Placeholder="Enter amount" />
+                </div>
+            </div>
+        </div>
+        <div class="input-options-container">
+            <div class="date-availability">
+                <label class="form-label">Select exam availability</label>
+                
+                <EditForm EditContext="@editContext" OnValidSubmit="HandleValidSubmit" novalidate>
+                        <DataAnnotationsValidator />
+                        <div class="form-group row mb-3">
+                            <div class="col-md-10">
+                                <DateInput TValue="DateTime?"
+                                           Value="onlineCourseForm.StartDate"
+                                           ValueExpression="() => onlineCourseForm.StartDate"
+                                           ValueChanged="(value) => StartDateChanged(value)" />
+                                <ValidationMessage For="@(() => onlineCourseForm.StartDate)" />
+                            </div>
+                            <label>Start Date: <span class="text-danger">*</span></label>
+                        </div>
+
+                        <div class="form-group row mb-3">
+                            <div class="col-md-10">
+                                <DateInput @ref="endDateInput" TValue="DateTime?"
+                                @bind-Value="onlineCourseForm.EndDate"
+                                           EnableMinMax="true"
+                                           Min="courseMinDate"
+                                           Max="courseMaxDate"
+                                           Disabled="false" />
+                                <ValidationMessage For="@(() => onlineCourseForm.EndDate)" />
+                            </div>
+                            <label>End Date: <span class="text-danger">*</span></label>
+                        </div>
+                </EditForm>
+            </div>
+
+            <div class="time-limit">
+                <label class="form-label">Set time limit</label>
+                <div class="time-limit">
+                    <NumberInput TValue="int?" @bind-Value="@hours" EnableMinMax="true" Min="0" Max="2" Placeholder="Enter amount" />
+                    <label for="hours">Hours:</label>
+                    <p style="color: red;">@hoursErrorMessage</p>
+
+                    <NumberInput TValue="int?" @bind-Value="@minutes" EnableMinMax="true" Min="0" Max="59" Placeholder="Enter amount" />
+                    <label for="minutes">Minutes:</label>
+                    <p style="color: red;">@minutesErrorMessage</p>
+                </div>
+            </div>
+     
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <Button Type="ButtonType.Button" Color="ButtonColor.Secondary" Class="float-end" @onclick="ResetForm">Reset</Button>
+                <Button Type="ButtonType.Submit" Color="ButtonColor.Success" Class="float-end me-2" @onclick="() => CreateExam()">Submit</Button>
+            </div>
+        </div>
+        <div class="availability">
+            <label class="form-label">Display</label>
+            <Switch @bind-Value="agree1" />
+        </div>
+    </div>
+    @if (ShowSubmittedExams)
+    {
+        <h2>Submitted Exams:</h2>
+        <ul>
+            @foreach (var exam in examsInstance.ExamSettings)
+            {
+                <li>
+                    Category: @exam.CategoryType, Time Limit: @exam.TimeLimit, Start Date: @exam.AvailabilityStart, End Date: @exam.AvailabilityEnd, Difficulty: @exam.Difficulty, Max Attempts: @exam.MaxAttempts, Display Available: @exam.IsPubliclyAvailable
+                </li>
+            }
+        </ul>
+    }
+}
+
+@code {
+    private int? hours;
+    private int? minutes;
+    private string? hoursErrorMessage;
+    private string? minutesErrorMessage;
+    private int activeButton = 0;
+    private string? SelectedCategoryType;
+    private string? SelectedDifficulty;
+    private bool ShowSubmittedExams = false;
+    bool agree1;
+    private int? amount;
+    private Exams examsInstance = new Exams();
+
+    private IList<Category> categories;
+
+    DateInput<DateTime?> endDateInput = default!;
+    private OnlineCourseForm onlineCourseForm = new();
+    private EditContext editContext;
+    private DateTime? courseMinDate;
+    private DateTime? courseMaxDate;
+    [Inject] ToastService _toastService { get; set; }
+
+    private bool IsActiveButton(int buttonNumber)
+    {
+        return activeButton == buttonNumber;
+    }
+
+    private void ToggleActive(int buttonNumber)
+    {
+        activeButton = IsActiveButton(buttonNumber) ? 0 : buttonNumber;
+    }
+
+    protected override void OnInitialized()
+    {
+        editContext = new EditContext(onlineCourseForm);
+        base.OnInitialized();
+
+        categories = new List<Category> {
+            new Category { Id = 1, Name = "Math" },
+            new Category { Id = 2, Name = "Biology" },
+            new Category { Id = 3, Name = "Geography" },
+            new Category { Id = 4, Name = "Anatomy" },
+            new Category { Id = 5, Name = "Mixed" }
+        };
+    }
+    private void StartDateChanged(DateTime? startDate)
+    {
+        if (startDate is null || !startDate.HasValue)
+        {
+            onlineCourseForm.StartDate = null;
+            onlineCourseForm.EndDate = null;
+            courseMinDate = null;
+            courseMaxDate = null;
+            endDateInput.Disable();
+            return;
+        }
+        onlineCourseForm.StartDate = startDate;
+        onlineCourseForm.EndDate = null;
+        courseMinDate = startDate.Value;
+        courseMaxDate = startDate.Value.AddDays(7);
+        endDateInput.Enable();
+    }
+    public void HandleValidSubmit()
+    {
+        var toastMessage = new ToastMessage
+        (
+            type: ToastType.Success,
+            iconName: IconName.Check2All,
+            title: "Success!",
+            helpText: $"{DateTime.Now.ToLocalTime()}",
+            message: "Online course schedule created."
+        );
+        _toastService.Notify(toastMessage);
+    }
+    private void ResetForm()
+    {
+        onlineCourseForm = new OnlineCourseForm();
+        editContext = new EditContext(onlineCourseForm);
+
+        hours = 0;
+        minutes = 0;
+        hoursErrorMessage = null;
+        minutesErrorMessage = null;
+
+        onlineCourseForm.StartDate = null;
+        onlineCourseForm.EndDate = null;
+        courseMinDate = null;
+        courseMaxDate = null;
+        endDateInput.Disable(); 
+
+    }
+    public class OnlineCourseForm
+    {
+        [Required(ErrorMessage = "Start Date required.")]
+        public DateTime? StartDate { get; set; }
+        [Required(ErrorMessage = "End Date required.")]
+        public DateTime? EndDate { get; set; }
+    }
+
+    private void ValidateHours(ChangeEventArgs e)
+    {
+        if (int.TryParse(e.Value.ToString(), out int parsedHours))
+        {
+            if (parsedHours > 2)
+            {
+                hoursErrorMessage = "Hours cannot be greater than 2";
+            }
+            else
+            {
+                hoursErrorMessage = "";
+            }
+        }
+        else
+        {
+            hoursErrorMessage = "Invalid input for hours.";
+        }
+    }
+
+    private void ValidateMinutes(ChangeEventArgs e)
+    {
+        if (int.TryParse(e.Value.ToString(), out int parsedMinutes))
+        {
+            if (parsedMinutes > 59)
+            {
+                minutesErrorMessage = "Minutes cannot be greater than 59";
+            }
+            else
+            {
+                minutesErrorMessage = "";
+            }
+        }
+        else
+        {
+            minutesErrorMessage = "Invalid input for minutes.";
+        }
+    }
+
+   public void AddSettingsToList()
+{
+    var timeLimitString = $"{hours} hours {minutes} minutes";
+    ShowSubmittedExams = true;
+
+    if (onlineCourseForm.StartDate.HasValue && onlineCourseForm.EndDate.HasValue)
+    {
+        var newSetting = new ExamCategory
+            {
+                CategoryType = SelectedCategoryType,
+                TimeLimit = timeLimitString,
+                AvailabilityStart = onlineCourseForm.StartDate.Value,
+                AvailabilityEnd = onlineCourseForm.EndDate.Value,
+                Difficulty = SelectedDifficulty,
+                IsPubliclyAvailable = agree1,
+                MaxAttempts = amount
+            };
+        examsInstance.ExamSettings.Add(newSetting);
+    }
+    
+    ResetForm();
+}
+    private async Task CreateExam()
+    {
+        List<ExamQuestion> questions = new List<ExamQuestion>
+{
+    new ExamQuestion
+    {
+        id = "32",
+        questionId = "32",
+        Type = "36",
+        examId = "432",
+        examinerId = "as",
+        userId = "fd",
+        Text = "fdf"
+    },
+};
+        Exams exam = new Exams
+            {
+                id = "17",
+                Category = SelectedCategoryType,
+                IsPublic = agree1,
+                AvailabilityStart = onlineCourseForm.StartDate.Value,
+                AvailabilityEnd = onlineCourseForm.EndDate.Value,
+                MaxAttemptDuration = 120,
+            };
+
+
+
+        var response = await httpClient.PostAsJsonAsync("https://wa-brainspark-pol-dev.azurewebsites.net/exams", exam);
+
+    }
+
+}
+

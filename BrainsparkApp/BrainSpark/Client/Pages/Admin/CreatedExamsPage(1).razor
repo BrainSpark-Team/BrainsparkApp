@@ -1,0 +1,36 @@
+﻿@page "/admin/examscreated"
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-between p-0">
+            <NavLink class="my-auto" href="/">
+                Back <img src="/Images/arrow-left.svg" />
+            </NavLink>
+        </div>
+        <div class="col-12 exam-container px-md-4 py-md-5 mt-3">
+            <h1>My Exams</h1>
+            <div class="col-12 add-new-container p-0 p-md-3 d-flex">
+                <span>Exam name</span>
+                <span>Created</span>
+                <span>Edit</span>
+                <span>Delete</span>
+            </div>
+            @foreach (var exam in exams)
+            {
+                <div class="col-12 add-new-container p-0 p-md-3 d-flex">
+                    <span>@exam.Title</span>
+                    <span>dd.MM.yyyy</span>
+                    <span>Edit</span>
+                    <span>Delete</span>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+@code {
+    List<Exams> exams = new List<Exams>();
+
+
+}

@@ -1,0 +1,110 @@
+﻿@page "/category/{Category}/{Id}"
+<div class="container-fluid top-bg mt-4">
+	<div class="header-container">
+		<div class="header-title">@Categories[0].Title</div>
+		<div class="header-details">
+			<div class="row">
+				<div class="col-12 col-sm-6">
+					<p><i class="fa-regular fa-clock"></i> Duration: <b>@Categories[0].TestDuration</b></p>
+					<p><i class="fa-regular fa-circle-question"></i> Questions: <b>@Categories[0].Questions</b></p>
+				</div>
+				<div class="col-12 col-sm-6">
+					<p><i class="fa-solid fa-chart-simple"></i> Difficulty: <b>@Categories[0].Difficulty</b></p>
+					<p><i class="fa-solid fa-wallet"></i> Exam Attempts: <b>@Categories[0].MaxAttempts</b></p>
+				</div>
+				<div class="col-12">
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row py-4">
+		<div class="col-12">
+			<div class="buy-exam-title">
+			Buy Exam Attempt: Supercharge Your Success!
+			</div>
+			<div>
+				Are you ready to put your knowledge to the test and achieve remarkable results? Our "Buy Exam Attempts" feature allows you to take your 
+				preparation to the next level. By purchasing additional exam attempts, you increase your chances of mastering the material and securing the
+				best possible grade. Every attempt brings you closer to perfection, helping you refine your understanding and grasp the intricacies of the subject
+				matter. Don't miss out on this opportunity to showcase your true potential and excel in your exams. Invest in your success today!
+			</div>
+		</div>
+		<div class="purchase-options">Purchase Options</div>
+		<div class="col-12 col-sm-6">
+			<div class="purchase-container-basic">
+				<div class="purchase-title">Basic</div>
+				<div><i class="fa-solid fa-check check"></i> Single attempt to engage with the exam</div>
+				<div><i class="fa-solid fa-xmark xmark"></i> Unlock all the correct answers</div>
+				<div class="price-container">
+					<div class="price-text">Price</div>
+					<div class="price">10$</div>
+				</div>
+				<button>Buy now</button>
+			</div>
+		</div>
+		<div class="col-12 col-sm-6">
+			<div class="purchase-container-ultimate">
+				<div class="purchase-title">Ultimate</div>
+				<div><i class="fa-solid fa-check check"></i> Single attempt to engage with the exam</div>
+				<div><i class="fa-solid fa-check check"></i> Unlock all the correct answers</div>
+				<div class="price-container">
+					<div class="price-text">Price</div>
+					<div class="price">30$</div>
+				</div>
+				<button>Buy now</button>
+			</div>
+		</div>
+		<div class="col-12">
+			<div class="description-container">All the details</div>
+		</div>
+		<NavLink class="take-test-link" href="/test/1">
+			<button class="button" disabled="@IsButtonDisabled()">
+				Take Test
+			</button>
+		</NavLink>
+	</div>
+</div>
+
+@code {
+	[Parameter]
+	public string Category { get; set; } = string.Empty;
+
+	[Parameter]
+	public string Id { get; set; } = string.Empty;
+
+	DateTime currentTime = DateTime.Now;
+
+
+	private bool IsButtonDisabled()
+	{
+		if (Categories[0].AvailabilityStart >= currentTime || Categories[0].AvailabilityEnd.AddMinutes(1) <= currentTime)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	private static List<ExamCategory> Categories = new List<ExamCategory>
+	{
+		new  ExamCategory
+		{
+			examId = 1,
+			CategoryType= "Nature",
+			ImgUrl = "/Images/FlowerPic.png",
+			ImgAlt = "Nature picture",
+			TimeLimit = "No time limit",
+			Title = "Flower Test",
+			Questions = 12,
+			Difficulty = "Easy",
+			LearningResources = "https://www.microsoft.com/ro-ro",
+			AvailabilityStart = new DateTime(2023, 8, 21, 14, 3, 0),
+			AvailabilityEnd = new DateTime(2023, 8, 30, 14, 43, 0),
+			TestDuration = new TimeOnly(1, 30),
+			IsPubliclyAvailable = true,
+			MaxAttempts = 1
+		}
+	};
+}

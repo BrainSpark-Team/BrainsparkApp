@@ -1,0 +1,16 @@
+﻿.exam-container {
+    background-color: #F9F6FF;
+    border-radius: 6px;
+    margin-bottom: 5rem;
+}
+
+.add-new-container {
+    background-color: #FF7A00;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}

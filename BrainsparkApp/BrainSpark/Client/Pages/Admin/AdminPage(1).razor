@@ -1,0 +1,93 @@
+﻿@page "/admin"
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<div class="container acc-cont">
+	<div class="row mt-4">
+		<div class="col-3">
+			<!-- Inserted User Country or Login Status Here -->
+            <div class="user-info">
+                <h4>@displayText</h4>
+				<h5>@displayText2</h5>
+            </div>
+            <!-- End of Inserted Section -->
+			<div>
+				<i class="fa-solid fa-house"></i> My Profile
+			</div>
+			<div class="accordion" id="accordionPanelsStayOpenExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+							<i class="fa-regular fa-pen-to-square"></i> Exams
+						</button>
+					</h2>
+					<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+						<div class="accordion-body">
+							<div class="acordion-links">
+								<span class="f-span"></span>
+								<span><NavLink class="exam-btn" href="admin/examscreated">Created</NavLink></span>
+							</div>
+							<div class="acordion-links">
+								<span class="f-span"></span>
+								<span>Assigned</span>
+							</div>
+							<div class="acordion-links">
+								<span class="f-span"></span>
+								<span><NavLink class="exam-btn" href="admin/newexam">New exam</NavLink></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<i class="fa-solid fa-gear"></i> Settings
+			</div>
+			<div class="mt-5 pt-5">
+				<i class="fa-solid fa-arrow-right-from-bracket"></i> Log out
+			</div>
+		</div>
+	</div>
+</div>
+
+
+@code {
+private string displayText = "You are not logged in";
+private string displayText2 = "You are not logged in";
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+		Console.WriteLine("Debugging Claims:");
+        foreach (var claim in user.Claims)
+        {
+            Console.WriteLine($"Claim Type: {claim.Type}, Claim Value: {claim.Value}");
+        }
+
+
+        if (user.Identity.IsAuthenticated)
+        {
+            // Replace "country" with the actual claim type for the country
+            var countryClaim = user.Claims.FirstOrDefault(c => c.Type == "country" || c.Type == "countryRegion" || c.Type == "http://schemas.microsoft.com/claims/countryregion");
+            if (countryClaim != null)
+            {
+                displayText = $"You are from {countryClaim.Value}";
+            }
+            else
+            {
+                displayText = "Country information not available";
+            }
+
+			var accountTypeClaim = user.Claims.FirstOrDefault(c => c.Type == "AccountType" || c.Type == "accountType" || c.Type == "accounttype" || c.Type == "http://schemas.microsoft.com/claims/accounttype" || c.Type == "extension_AccountType" || c.Type == "extension_accountType" || c.Type == "extension_accounttype");
+			if (accountTypeClaim != null)
+			{
+				displayText2 = $"You are a {accountTypeClaim.Value}";
+			}
+			else
+			{
+				displayText2 = "Account type not available";
+			}
+        }
+    }
+}

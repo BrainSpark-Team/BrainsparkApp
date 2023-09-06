@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Components\ExamPage\**" />
+    <Content Remove="Components\ExamPage\**" />
+    <EmbeddedResource Remove="Components\ExamPage\**" />
+    <None Remove="Components\ExamPage\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazor.Bootstrap" Version="1.10.0" />
+    <PackageReference Include="Blazored.TextEditor" Version="1.1.0" />
+    <PackageReference Include="Blzr.BootstrapSelect" Version="0.3.0" />
+    <PackageReference Include="DinkToPdf" Version="1.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.9" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Playwright" Version="1.37.1" />
+    <PackageReference Include="PdfSharpCore" Version="1.3.57" />
+    <PackageReference Include="xunit" Version="2.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="7.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.9" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Authentication.WebAssembly.Msal" Version="7.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Components\CategoryDetailsPage\" />
+  </ItemGroup>
+
+</Project>

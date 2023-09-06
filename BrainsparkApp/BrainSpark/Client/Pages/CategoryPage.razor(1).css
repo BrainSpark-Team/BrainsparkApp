@@ -1,0 +1,13 @@
+﻿.heading-title {
+    color: #0E2954;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.category-title {
+    color: #0E2954;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: .2rem;
+}

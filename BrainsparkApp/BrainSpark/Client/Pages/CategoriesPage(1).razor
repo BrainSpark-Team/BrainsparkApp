@@ -1,0 +1,138 @@
+﻿@page "/categories"
+@inject HttpClient Http
+
+
+<TopSection />
+
+<div class="container mx-auto mt-5">
+	<div class="categories-title">Categories</div>
+</div>
+
+<div class="container mx-auto mt-3">
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter" @bind="selectedCategory">
+        <option value="">All</option>
+        @foreach (var category in Categories)
+        {
+            <option value="@category.CategoryType">@category.CategoryType</option>
+        }
+    </select>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        @if (CategoriesToShow != null && CategoriesToShow.Count > 0)
+        {
+            @if (exams != null && exams.Length != 0)
+            {
+                @foreach (var exam in exams)
+                {
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <CategoriesCard CategoryType="" ImgUrl="" ImgAlt="" Title="@exam.Title"
+                                        Difficulty="" Questions="1" />
+                    </div>
+                }
+            }
+            @foreach (var exam in CategoriesToShow)
+            {
+                <div class="col-12 col-md-6 col-lg-4">
+                    <CategoriesCard CategoryType="@exam.CategoryType" ImgUrl="@exam.ImgUrl" ImgAlt="@exam.ImgAlt" Title="@exam.Title"
+                                    Difficulty="@exam.Difficulty" Questions="@exam.Questions" />
+                </div>
+            }
+        }
+        else
+        {
+            <div class="mx-auto my-auto">No categories match the selected filter.</div>
+        }
+    </div>
+</div>
+
+@code {
+	private static List<ExamCategory> Categories = new List<ExamCategory>
+	{
+       new  ExamCategory
+        {
+            examId = 0,
+            CategoryType= "Nature",
+            ImgUrl = "/Images/img1.jpg",
+            ImgAlt = "Nature picture",
+            TimeLimit = "No time limit",
+            Title = "Nature Exams",
+            Questions = 20,
+            Difficulty = "Easy",
+            LearningResources = "https://www.microsoft.com/ro-ro",
+            AvailabilityStart = new DateTime(2023, 8, 21, 14, 3, 0),
+            AvailabilityEnd = new DateTime(2023, 8, 28, 14, 43, 0),
+            TestDuration = new TimeOnly(1, 30),
+            IsPubliclyAvailable = true,
+            MaxAttempts = 1
+        },
+        new  ExamCategory
+        {
+            examId = 1,
+            CategoryType= "Biology",
+            ImgUrl = "/Images/BiologyPic.png",
+            TimeLimit = "No time limit",
+            Title = "Biology Exams",
+            Questions = 15,
+            Difficulty = "Easy"
+        },
+        new  ExamCategory
+        {
+            examId = 2,
+            CategoryType= "Anatomy",
+            ImgUrl = "/Images/AnatomyPic.png",
+            TimeLimit = "No time limit",
+            Title = "Anatomy Exams",
+            Questions = 12,
+            Difficulty = "Easy"
+        },
+        new  ExamCategory
+        {
+            examId = 3,
+            CategoryType= "Technology",
+            ImgUrl = "/Images/TechnologyPic.png",
+            TimeLimit = "No time limit",
+            Title = "Technology Exam",
+            Questions = 12,
+            Difficulty = "Easy"
+        },
+        new  ExamCategory
+        {
+            examId = 4,
+            CategoryType= "Geography",
+            ImgUrl = "/Images/GeographyPic.png",
+            TimeLimit = "No time limit",
+            Title = "Geography Exam",
+            Questions = 12,
+            Difficulty = "Easy"
+        }
+	};
+
+
+    private ExamModel[] exams;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var httpClient = new HttpClient();
+        exams = await httpClient.GetFromJsonAsync<ExamModel[]>("https://wa-brainspark-pol-dev.azurewebsites.net/exams");
+    }
+
+    private string selectedCategory = "";
+
+    private List<ExamCategory> CategoriesToShow =>
+        string.IsNullOrEmpty(selectedCategory)
+            ? Categories // Show all categories if no filter is selected
+            : Categories.Where(c => c.CategoryType == selectedCategory).ToList();
+
+	/*protected override async Task OnInitializedAsync()
+	{
+		var result = await Http.GetFromJsonAsync<List<ExamCategory>>("api/exam");
+		if (result != null)
+		{
+			Categories = result;
+		}
+	}*/
+}

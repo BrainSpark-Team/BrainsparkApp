@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Microsoft.AspNetCore.Components.Authorization
+@page "/login"
+
+<AuthorizeView>
+    <NotAuthorized>
+        <button @onclick="BeginLogin">Login with Azure AD B2C</button>
+    </NotAuthorized>
+    <Authorized>
+        Welcome, @context.User.Identity.Name!
+        <button @onclick="BeginLogout">Logout</button>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+   private void BeginLogin()
+{
+    NavigationManager.NavigateTo("authentication/login");
+}
+
+private void BeginLogout()
+{
+    NavigationManager.NavigateTo("authentication/logout");
+}
+
+    [Inject] public NavigationManager NavigationManager { get; set; }
+    [Inject] public AuthenticationStateProvider AuthenticationStateProvider { get; set; }
+    [Inject] public RemoteAuthenticationService<RemoteAuthenticationState, RemoteUserAccount, OidcProviderOptions> AuthenticationService { get; set; }
+}
