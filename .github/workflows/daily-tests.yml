@@ -20,7 +20,7 @@ jobs:
           dotnet-version: 7.0.x
 
       - name: Restore dependencies for the main project
-        run: dotnet restore /home/runner/work/BrainsparkApp/BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
+        run: dotnet restore /home/runner/work/BrainsparkApp/BrainsparkApp/BrainSpark/Client/BrainSpark.Client(1).csproj
 
       - name: Restore dependencies for the test project
         run: dotnet restore /home/runner/work/BrainsparkApp/BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
