@@ -1,0 +1,32 @@
+﻿@inject NavigationManager NavigationManager
+
+<div class="container my-5">
+	<div class="row">
+		<div class="landing-container col-12 col-lg-6 px-0 px-md-3">
+			<div class="text-container">
+				<h3 class="landing-text">
+					Welcome to the <span>BrainSpark</span> Exam Website!
+				</h3>
+				<p class="">Unlock Your Potential, Ace Your Exams!</p>
+				<button class="student-signup-btn my-2 me-0 me-md-2" @onclick="NavigateToRegister"><span class="student">Student</span> <span class="sign-text">Sign up for free</span></button>
+				<button class="teacher-login-btn my-2 ms-0 ms-md-2" @onclick="NavigateToLogin"><span class="teacher">Teacher</span> <span class="log-text">Log in here</span></button>
+			</div>
+		</div>
+		<div class="landing-svg col-12 col-lg-6">
+			<img src="/LearningPic.svg" alt="Svg Learning Image" />
+		</div>
+	</div>
+</div>
+<div class="col-12 waves-bg mt-3 mt-md-5">
+	<img src="/Images/waves.svg" alt="waves opacity image" class="mt-1 mt-md-5" />
+</div>
+@code {
+	private void NavigateToRegister()
+	{
+		NavigationManager.NavigateTo("https://brainsparkdevb2c.b2clogin.com/brainsparkdevb2c.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_signup&client_id=721c878d-1e30-44e7-a2dd-43f3b2c7c5a8&nonce=defaultNonce&redirect_uri=https%3A%2F%2Fgentle-pond-071fafa03.3.azurestaticapps.net%2Fauthentication%2Flogin-callback%2F&scope=openid&response_type=code&prompt=login&code_challenge_method=S256&code_challenge=7TFemVcDHHchawYDR--yiomkGTCX94XVRoAwEMdTvF8");
+	}
+	private void NavigateToLogin()
+	{
+		NavigationManager.NavigateTo("https://brainsparkdevb2c.b2clogin.com/brainsparkdevb2c.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_signupsignin&client_id=721c878d-1e30-44e7-a2dd-43f3b2c7c5a8&nonce=defaultNonce&redirect_uri=https%3A%2F%2Fgentle-pond-071fafa03.3.azurestaticapps.net%2Fauthentication%2Flogin-callback%2F&scope=openid&response_type=code&prompt=login&code_challenge_method=S256&code_challenge=25zbZAUI7J0JhnLSEn3HWP41dT94tkmO6ZK_GQWYsPY");
+	}
+}

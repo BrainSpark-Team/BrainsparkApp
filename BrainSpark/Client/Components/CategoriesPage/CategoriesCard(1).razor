@@ -1,0 +1,48 @@
+﻿<div class="category-card">
+	<NavLink class="cat-link" href="@GetLink()">
+		<img src="@ImgUrl" alt="@ImgAlt" class="card-img" />
+	</NavLink>
+	<div class="details-container">
+		<NavLink class="cat-link" href="@GetLink()">
+			<div class="title">
+				@Title <img src="/Images/leaf.svg" alt="leaf icon" />
+			</div>
+		</NavLink>
+		<p><i class="fa-regular fa-clock"></i> No Time Limit</p>
+		<p><i class="fa-regular fa-circle-question"></i> @Questions Questions</p>
+		<p><i class="fa-solid fa-chart-simple"></i> Difficulty @Difficulty</p>
+		<p><i class="fa-solid fa-chart-line"></i> Number of exams</p>
+		<p><i class="fa-solid fa-ice-cream"></i> Ice Cream</p>
+		<NavLink class="cat-link" href="@GetLink()">
+			<button>
+				View
+			</button>
+		</NavLink>
+	</div>
+</div>
+
+@code {
+	[Parameter]
+	public string ImgUrl { get; set; } = string.Empty;
+
+	[Parameter]
+	public string ImgAlt { get; set; } = string.Empty;
+
+	[Parameter]
+	public string Title { get; set; } = string.Empty;
+
+	[Parameter]
+	public string Difficulty { get; set; } = string.Empty;
+
+	[Parameter]
+	public int Questions { get; set; }
+
+	[Parameter]
+	public string CategoryType { get; set; } = string.Empty;
+
+
+	private string GetLink()
+	{
+		return $"/category/{this.CategoryType}";
+	}
+}

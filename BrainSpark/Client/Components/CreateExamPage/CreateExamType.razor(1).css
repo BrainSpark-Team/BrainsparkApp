@@ -1,0 +1,90 @@
+﻿.title {
+    text-align: center;
+    margin-bottom: 4.5rem;
+    font-size: 46px;
+}
+
+.select-options {
+    text-align: center;
+}
+
+.exam-type {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 12px 0px;
+}
+
+.public-container, .assigned-container {
+    background-color: #F9F6FF;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    max-width: 30%;
+}
+
+    .public-container > p {
+        font-size: 18px;
+    }
+
+    .assigned-container > p {
+        font-size: 18px;
+    }
+
+.public-button, .assigned-button {
+    border-radius: 6px;
+    background: #FF7A00;
+    border: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+}
+
+.time-limit {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.hours, .minutes {
+    border-radius: 6px;
+    border: 2px solid #FF7A00;
+}
+
+.select-options-container  {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+.input-options-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.5rem;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+.form-label {
+    font-size: 26px;
+}
+.category {
+    display: flex;
+    flex-direction: column;
+}
+.card-flex {
+    display: flex;
+
+}
+.options-container {
+    background-color: #F9F6FF;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}

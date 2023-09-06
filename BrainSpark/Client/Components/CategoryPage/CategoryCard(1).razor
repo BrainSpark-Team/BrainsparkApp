@@ -1,0 +1,81 @@
+﻿<div class="category-card">
+	<div class="img-container">
+		<img src="@ImgUrl" alt="@ImgAlt" class="card-img" />
+	</div>
+	<div class="details-container">
+		<div class="title">
+			@Title <img src="/Images/leaf.svg" alt="leaf icon" />
+		</div>
+		<div class="details-text mb-2">
+			@*<DetailsModal ModalTitle="@ModalTitle" ModalId="@TestId" />*@
+		</div>
+		<p><i class="fa-regular fa-clock"></i> Duration: @TestDuration</p>
+		<p><i class="fa-regular fa-circle-question"></i> @Questions Questions</p>
+		<p><i class="fa-solid fa-chart-simple"></i> Difficulty @Difficulty</p>
+		<p><i class="fa-solid fa-hourglass-start"></i> Available from: @AvailabilityStart</p>
+		<p><i class="fa-solid fa-hourglass-end"></i> Available until: @AvailabilityEnd</p>
+		<p></p>
+		<NavLink class="take-test-link" href="@GetLink()">
+			<button class="button">
+				View Test <i class="fa-solid fa-circle-info"></i>
+			</button>
+		</NavLink>
+	</div>
+</div>
+
+
+@code {
+
+	private bool IsButtonDisabled()
+	{
+		if (AvailabilityStart >= currentTime || AvailabilityEnd.AddMinutes(1) <= currentTime)
+		{
+			return true;
+		}
+		return false;
+	}
+
+	[Parameter]
+	public string ImgUrl { get; set; } = string.Empty;
+
+	[Parameter]
+	public string CategoryType { get; set; } = string.Empty;
+
+	[Parameter]
+	public int ModalId { get; set; }
+
+	[Parameter]
+	public string ImgAlt { get; set; } = string.Empty;
+
+	[Parameter]
+	public string Title { get; set; } = string.Empty;
+
+	[Parameter]
+	public string ModalTitle { get; set; } = string.Empty;
+
+	[Parameter]
+	public string Difficulty { get; set; } = string.Empty;
+
+	[Parameter]
+	public int Questions { get; set; }
+
+	[Parameter]
+	public int TestId { get; set; }
+
+	[Parameter]
+	public DateTime AvailabilityStart { get; set; }
+
+	[Parameter]
+	public DateTime AvailabilityEnd { get; set; }
+
+	[Parameter]
+	public TimeOnly TestDuration { get; set; }
+
+	DateTime currentTime = DateTime.Now;
+
+	private string GetLink()
+	{
+		return $"/category/{this.CategoryType}/{this.TestId}";
+	}
+
+}

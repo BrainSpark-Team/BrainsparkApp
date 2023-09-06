@@ -1,0 +1,246 @@
+﻿@page "/test/{CurrentTestId:int}"
+@inject NavigationManager NavigationManager
+
+<div class="container-fluid test-page">
+	<div class="container">
+		<div class="row">
+			<div class="test-header">
+				<div class="test-points">
+					<img src="/Images/medalstar.svg" alt="medal icon" /> <span class="points">200</span>
+				</div>
+				<div class="test-title">
+					@ExampleTest.Title
+				</div>
+				<div class="test-time">
+					<Countdown Hours="0" Minutes="20" />
+				</div>
+			</div>
+			<div class="col-12 col-md-6 mx-auto">
+				@if (ExampleTest.Questions != null && CurrentQuestionIndex < ExampleTest.Questions.Count)
+				{
+					var question = ExampleTest.Questions[CurrentQuestionIndex];
+					<div class="test-container">
+						<div class="test-question-title text-center">@question.Questionn</div>
+						@if (question.Options != null)
+						{
+							@foreach (var (ans, index) in question.Options.Select((option, index) => (option, index)))
+							{
+								<div class="test-question @(index == SelectedOptionIndex ? "selected-option" : "") @(SelectedOptionIndices.ContainsKey(CurrentQuestionIndex) && SelectedOptionIndices[CurrentQuestionIndex].Contains(index) && !OptionSelected ? "previous-answer" : "")" @onclick="() => SelectOption(ans, index)">
+									<span class="abcd-text">@abcd[index]</span>
+									<span class="test-text">@ans</span>
+								</div>
+							}
+						}
+						else
+						{
+							<div>No questions found.</div>
+						}
+					</div>
+				}
+				else
+				{
+					<div class="mt-5 text-center">You have left question without answer.</div>
+					<div class="text-center">Are you sure you want to finish test ?</div>
+					<button class="btn btn-danger mt-3 mx-auto d-block" @onclick="FinishTest">Finish Test</button>
+				}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid progress-container px-0 py-4">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="d-flex justify-content-sm-around justify-content-between">
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: @ProgressPercentage%" aria-valuenow="@ProgressValue" aria-valuemin="0" aria-valuemax="100">
+						</div>
+						<div class="progress-value">@ProgressValue/@TotalValue</div>
+					</div>
+					<button class="btn btn-primary mr-2 @ButtonClass2" @onclick="PreviousQuestion" disabled="@(CurrentQuestionIndex == 0 || OptionSelected)"><i class="fa-solid fa-angle-left"></i> Previous</button>
+					<button class="btn btn-primary mr-2" @onclick="SkipQuestion" disabled="@(OptionSelected)">
+						Skip <i class="fa-solid fa-angles-right"></i>
+					</button>
+
+					<button class="@ButtonClass" @onclick="NextQuestion" disabled="@(!OptionSelected)">Continue <i class="fa-solid fa-angle-right"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@code {
+	[Parameter]
+	public int CurrentTestId { get; set; }
+
+	protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+		DateTime currentTime = DateTime.Now;
+
+		if (currentTime < ExampleTest.AvailabilityStart || currentTime > ExampleTest.AvailabilityEnd)
+        {
+			NavigationManager.NavigateTo("/categories");
+        }
+    }
+
+	private DateTime eventTime = DateTime.Now.AddHours(1);
+
+	private int inc = 0;
+
+	private int ProgressValue = 0;
+	private int TotalValue => ExampleTest.Questions.Count;
+
+	private double ProgressPercentage => (double)(CurrentQuestionIndex) / ExampleTest.Questions.Count * 100;
+
+	private string[] abcd = new string[] { "a", "b", "c", "d" };
+
+	private int CurrentQuestionIndex = 0;
+
+	private bool OptionSelected = false;
+
+
+	private string SelectedOption = string.Empty;
+
+	private int SelectedOptionIndex = -1;
+
+	string ButtonClass => OptionSelected ? "selected-button" : "";
+
+	string ButtonClass2 => CurrentQuestionIndex > 0 ? "selected-button-prev" : "";
+
+
+
+
+	private Dictionary<int, List<int>> SelectedOptionIndices = new Dictionary<int, List<int>>();
+
+	private void SelectOption(string option, int index)
+	{
+		OptionSelected = true;
+		SelectedOption = option;
+		SelectedOptionIndex = index;
+
+		if (SelectedOptionIndices.ContainsKey(CurrentQuestionIndex))
+		{
+			SelectedOptionIndices[CurrentQuestionIndex].Clear();
+		}
+
+		if (!SelectedOptionIndices.ContainsKey(CurrentQuestionIndex))
+		{
+			SelectedOptionIndices[CurrentQuestionIndex] = new List<int>();
+		}
+
+		SelectedOptionIndices[CurrentQuestionIndex].Add(index);
+	}
+
+	private void NextQuestion()
+	{
+		if (OptionSelected)
+		{
+			CurrentQuestionIndex++;
+			ProgressValue = CurrentQuestionIndex;
+			inc = 0;
+			OptionSelected = false;
+			SelectedOption = string.Empty;
+			SelectedOptionIndex = -1;
+
+			if (CurrentQuestionIndex >= ExampleTest.Questions.Count)
+			{
+				// Check if all questions have been answered before navigating
+				bool allQuestionsAnswered = SelectedOptionIndices.Keys.Count == ExampleTest.Questions.Count;
+				if (allQuestionsAnswered)
+				{
+					NavigationManager.NavigateTo("/score");
+				}
+				else
+				{
+					// Handle the case where not all questions are answered
+					// For example, you could show a message to the user
+				}
+				return;
+			}
+			else
+			{
+				if (SelectedOptionIndices.ContainsKey(CurrentQuestionIndex))
+				{
+					SelectedOptionIndices[CurrentQuestionIndex].Clear();
+				}
+			}
+
+			// Reset the SelectedOptionIndices for the current question index after continuing
+			if (SelectedOptionIndices.ContainsKey(CurrentQuestionIndex))
+			{
+				SelectedOptionIndices.Remove(CurrentQuestionIndex);
+			}
+		}
+	}
+
+	private async Task FinishTest()
+	{
+		NavigationManager.NavigateTo("/score");
+	}
+
+	private void SkipQuestion()
+	{
+		if (CurrentQuestionIndex < ExampleTest.Questions.Count)
+		{
+			CurrentQuestionIndex++;
+			ProgressValue = CurrentQuestionIndex;
+			inc = 0;
+			OptionSelected = false;
+			SelectedOption = string.Empty;
+			SelectedOptionIndex = -1;
+		}
+	}
+
+	private void PreviousQuestion()
+	{
+		if (CurrentQuestionIndex > 0)
+		{
+			CurrentQuestionIndex--;
+			ProgressValue = CurrentQuestionIndex;
+			inc = 0;
+			OptionSelected = false;
+			SelectedOption = string.Empty;
+			SelectedOptionIndex = -1;
+		}
+	}
+
+
+	private Dictionary<int, string> SelectedAnswers = new Dictionary<int, string>();
+
+
+	Test ExampleTest = new Test
+		{
+			TestId = 1,
+			Title = "Flower Test",
+			TestCategory = "Nature",
+			TestSubCategory = "Flower",
+			TestDuration = new TimeOnly(1, 30),
+			LearningResources = "https://www.microsoft.com/ro-ro",
+			AvailabilityStart = new DateTime(2023, 8, 21, 14, 3, 0),
+			AvailabilityEnd = new DateTime(2023, 9, 8, 14, 43, 0),
+			Questions = new List<Question>
+
+		{
+			new Question
+			{
+				Questionn = "What is the capital of France ?",
+				Options = new List<string> { "Berlina", "London", "Paris", "Madrid" },
+				CorrectOption = "Paris"
+			},
+			new Question
+			{
+				Questionn = "1+1 ?",
+				Options = new List<string> { "3", "1", "2", "4" },
+				CorrectOption = "2"
+			},
+			new Question
+			{
+				Questionn = "6/2 ?",
+				Options = new List<string> { "3", "1", "2", "4" },
+				CorrectOption = "1"
+			},
+		}
+		};
+}
