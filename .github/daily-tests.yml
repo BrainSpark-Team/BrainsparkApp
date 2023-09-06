@@ -1,0 +1,41 @@
+name: Playwright .NET Tests
+
+on:
+  push:
+    branches: [Frontend]
+  pull_request:
+    branches: [Frontend]
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 7.0.x
+
+      - name: Restore dependencies for the main project
+        run: dotnet restore /home/runner/work/Internship202307/Internship202307/src/Frontend/BrainSpark/Client/BrainSpark.Client.csproj
+
+      - name: Restore dependencies for the test project
+        run: dotnet restore /home/runner/work/Internship202307/Internship202307/src/Frontend/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
+
+      - name: Install Playwright CLI
+        run: dotnet tool install --global Microsoft.Playwright.CLI
+
+      - name: Add dotnet global tools to PATH
+        run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
+      - name: Install Playwright Browsers
+        run: dotnet playwright install
+
+      - name: Build the project
+        run: dotnet build /home/runner/work/Internship202307/Internship202307/src/Frontend/BrainSpark/Client/BrainSpark.Client.csproj --configuration Release
+
+      - name: Run Playwright tests
+        run: dotnet test /home/runner/work/Internship202307/Internship202307/src/Frontend/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
