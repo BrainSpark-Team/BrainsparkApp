@@ -798,6 +798,69 @@
         }
       },
       {
+        "HashCode": 743853166,
+        "Kind": "Components.Component",
+        "Name": "BrainSpark.Client.Pages.CategoryPage",
+        "AssemblyName": "BrainSpark.Client",
+        "DisplayName": "BrainSpark.Client.Pages.CategoryPage",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "CategoryPage"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "CategoryType",
+            "TypeName": "System.String",
+            "DisplayName": "string BrainSpark.Client.Pages.CategoryPage.CategoryType",
+            "Metadata": {
+              "Common.PropertyName": "CategoryType",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "BrainSpark.Client.Pages.CategoryPage",
+          "Common.TypeNameIdentifier": "CategoryPage",
+          "Common.TypeNamespace": "BrainSpark.Client.Pages",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -520964684,
+        "Kind": "Components.Component",
+        "Name": "BrainSpark.Client.Pages.CategoryPage",
+        "AssemblyName": "BrainSpark.Client",
+        "DisplayName": "BrainSpark.Client.Pages.CategoryPage",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BrainSpark.Client.Pages.CategoryPage"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "CategoryType",
+            "TypeName": "System.String",
+            "DisplayName": "string BrainSpark.Client.Pages.CategoryPage.CategoryType",
+            "Metadata": {
+              "Common.PropertyName": "CategoryType",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "BrainSpark.Client.Pages.CategoryPage",
+          "Common.TypeNameIdentifier": "CategoryPage",
+          "Common.TypeNamespace": "BrainSpark.Client.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
         "HashCode": 1560686820,
         "Kind": "Components.Component",
         "Name": "BrainSpark.Client.Pages.ForgotPassword",
@@ -1065,6 +1128,69 @@
         "Metadata": {
           "Common.TypeName": "BrainSpark.Client.Pages.TermsOfService",
           "Common.TypeNameIdentifier": "TermsOfService",
+          "Common.TypeNamespace": "BrainSpark.Client.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -889751199,
+        "Kind": "Components.Component",
+        "Name": "BrainSpark.Client.Pages.TestPage",
+        "AssemblyName": "BrainSpark.Client",
+        "DisplayName": "BrainSpark.Client.Pages.TestPage",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "TestPage"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "CurrentTestId",
+            "TypeName": "System.Int32",
+            "DisplayName": "int BrainSpark.Client.Pages.TestPage.CurrentTestId",
+            "Metadata": {
+              "Common.PropertyName": "CurrentTestId",
+              "Common.GloballyQualifiedTypeName": "global::System.Int32"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "BrainSpark.Client.Pages.TestPage",
+          "Common.TypeNameIdentifier": "TestPage",
+          "Common.TypeNamespace": "BrainSpark.Client.Pages",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 757387836,
+        "Kind": "Components.Component",
+        "Name": "BrainSpark.Client.Pages.TestPage",
+        "AssemblyName": "BrainSpark.Client",
+        "DisplayName": "BrainSpark.Client.Pages.TestPage",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "BrainSpark.Client.Pages.TestPage"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "CurrentTestId",
+            "TypeName": "System.Int32",
+            "DisplayName": "int BrainSpark.Client.Pages.TestPage.CurrentTestId",
+            "Metadata": {
+              "Common.PropertyName": "CurrentTestId",
+              "Common.GloballyQualifiedTypeName": "global::System.Int32"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "BrainSpark.Client.Pages.TestPage",
+          "Common.TypeNameIdentifier": "TestPage",
           "Common.TypeNamespace": "BrainSpark.Client.Pages",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
