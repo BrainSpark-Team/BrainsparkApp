@@ -2,9 +2,9 @@ name: Playwright .NET Tests
 
 on:
   push:
-    branches: [Frontend]
+    branches: [Debug-Workflow]
   pull_request:
-    branches: [Frontend]
+    branches: [Debug-Workflow]
 
 jobs:
   test:
@@ -20,10 +20,10 @@ jobs:
           dotnet-version: 7.0.x
 
       - name: Restore dependencies for the main project
-        run: dotnet restore /home/runner/work/Internship202307/Internship202307/src/Frontend/BrainSpark/Client/BrainSpark.Client.csproj
+        run: dotnet restore /home/runner/work/BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
 
       - name: Restore dependencies for the test project
-        run: dotnet restore /home/runner/work/Internship202307/Internship202307/src/Frontend/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
+        run: dotnet restore /home/runner/work/BrainsparkApp/BrainSparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
 
       - name: Install Playwright CLI
         run: dotnet tool install --global Microsoft.Playwright.CLI
@@ -35,7 +35,7 @@ jobs:
         run: dotnet playwright install
 
       - name: Build the project
-        run: dotnet build /home/runner/work/Internship202307/Internship202307/src/Frontend/BrainSpark/Client/BrainSpark.Client.csproj --configuration Release
+        run: dotnet build /home/runner/work/BrainsparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj --configuration Release
 
       - name: Run Playwright tests
-        run: dotnet test /home/runner/work/Internship202307/Internship202307/src/Frontend/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
+        run: dotnet test /home/runner/work/BrainsparkApp/BrainSparkApp/BrainSpark/Client/BrainSpark.Client.E2ETests/BrainSpark.Client.E2ETests.csproj
